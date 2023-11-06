@@ -5,10 +5,11 @@
         "food_category": "breakfast",
         "food_image": "https://i.ibb.co/2S5trRr/th-27.jpg",
         "price": 390,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 8,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Scrambled eggs are a classic breakfast dish that involves beating eggs and seasoning them with salt and pepper. These seasoned eggs are then cooked in a pan with the addition of butter or cooking oil. As they cook, the eggs are gently stirred, creating soft and fluffy curds. The cooking time can be adjusted to achieve the desired level of doneness, whether you prefer them slightly runny or well-cooked and firm.Scrambled eggs are incredibly versatile, making them a popular choice for breakfast. You can enjoy them on their own or pair them with toast, making for a satisfying meal. Furthermore, you have the option to customize your scrambled eggs by adding various ingredients such as cheese, herbs, vegetables, or meats, which can enhance both the flavor and texture of the dish.Their simplicity and quick preparation have made scrambled eggs a beloved breakfast option, enjoyed by people of all ages. Whether you're a culinary novice or a seasoned chef, mastering the art of making perfect scrambled eggs is a skill that can lead to delicious and satisfying breakfasts."
 
     },
     {
@@ -17,10 +18,11 @@
         "food_category": "dietfood",
         "food_image": "https://i.ibb.co/tbZFM9z/th-28.jpg",
         "price": 280,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 3,
         "made_by" : "Marry Jane",
         "origin" : "China",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Grilled chicken salad is a delightful and wholesome dish that combines grilled chicken with fresh vegetables and dressings. Begin by marinating chicken breasts with salt, pepper, and olive oil. Grill the chicken until it's cooked through, then slice it. Prepare the salad with greens, tomatoes, cucumbers, red onions, and avocado. Add the grilled chicken and, optionally, croutons and cheese.Drizzle your favorite dressing and toss the salad for even coating. Enjoy a nutritious and flavorful meal with a perfect balance of protein and veggies. Grilled chicken salad is versatile and customizable to suit your preferences, making it a popular choice for a healthy and delicious lunch or dinner."
     },
     {
         "id": 3,
@@ -28,10 +30,11 @@
         "food_category": "dietfood",
         "food_image": "https://i.ibb.co/tbZFM9z/th-28.jpg",
         "price": 330,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 9,
         "made_by" : "Jack",
         "origin" : "China",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Oatmeal, a beloved breakfast staple, is a warm and comforting dish made from oats. To prepare oatmeal, oats are cooked in either water, milk, or a combination of both until they soften and thicken. This versatile dish can be customized to suit various tastes and dietary preferences.The key ingredient is oats, which come in different varieties, including old-fashioned rolled oats, quick oats, and steel-cut oats. Old-fashioned oats are popular for their balance of texture and cooking time, while steel-cut oats offer a heartier, nuttier texture. Quick oats, on the other hand, cook faster but are less textured.To make oatmeal, oats are typically simmered on the stovetop, microwaved, or cooked in a dedicated oatmeal maker. The liquid used can be water for a basic version, or milk (dairy or non-dairy) for a creamier result. Sweeteners like sugar, honey, or maple syrup can be added for sweetness, and spices like cinnamon or nutmeg are common flavor enhancements."
     },
     {
         "id": 4,
@@ -39,10 +42,11 @@
         "food_category": "lunch",
         "food_image": "https://i.ibb.co/QdRc11d/th-30.jpg",
         "price": 450,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 18,
         "made_by" : "Rakib",
         "origin" : "Indian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Grilled salmon is a delectable dish that showcases the natural flavors of this nutritious fish. To prepare grilled salmon, start with fresh salmon fillets, which can be wild-caught or farm-raised. The fillets are usually skin-on, as the skin helps hold the fish together while grilling and adds extra flavor. before grilling, the salmon is often marinated or seasoned with a mixture of ingredients like olive oil, lemon juice, garlic, herbs, and spices. This imparts a delightful blend of flavors and keeps the fish moist during cooking.The grilling process involves preheating the grill to medium-high heat. The salmon fillets are then placed directly on the grates, skin-side down. Grilling time varies depending on the thickness of the fillets but typically takes around 4-6 minutes per side. It's essential to avoid overcooking to maintain the fish's natural tenderness and flavor.Grilled salmon can be served as a standalone entrée or used in various dishes, like salads, pasta, or sandwiches. It pairs well with a variety of side dishes, including vegetables, rice, or couscous."
     },
     {
         "id": 5,
@@ -50,10 +54,11 @@
         "food_category": "dinner",
         "food_image": "https://i.ibb.co/YpvmQL6/th-31.jpg",
         "price": 550,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 15,
         "made_by" : "Suvo",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Steak and potatoes is a classic and hearty dish that combines the savory goodness of a perfectly cooked steak with the comforting appeal of potatoes. The key to this dish lies in the quality of the ingredients and the cooking technique. For the steak, you'll typically choose a high-quality cut like ribeye, sirloin, or filet mignon. The steak is seasoned with a simple yet flavorful blend of salt, pepper, and sometimes additional herbs and spices, allowing the natural meat flavor to shine. Potatoes are prepared in various ways to complement the steak. Common choices include mashed potatoes, roasted potatoes, or crispy French fries. Each potato preparation offers a different texture and taste to accompany the steak. Cooking the steak is a crucial step. You can grill it for a smoky char, pan-sear it for a crispy crust, or broil it for an even, all-around cooking. The degree of doneness, whether rare, medium-rare, medium, or well-done, is a matter of personal preference."
     },
     {
         "id": 6,
@@ -61,10 +66,11 @@
         "food_category": "snacks",
         "food_image": "https://i.ibb.co/LNzgLWh/th-32.jpg",
         "price": 150,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 19,
         "made_by" : "Sweety",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Popcorn is a beloved snack made from whole corn kernels that explode when heated. To prepare popcorn, you'll need dried corn kernels, typically available in various types, such as yellow or white. These kernels contain a small amount of water inside, which, when heated, turns into steam, causing the kernel to burst open and create the familiar fluffy snack.The most common method of popping popcorn is by using a stovetop or microwave. On the stovetop, you heat oil in a pot, add the kernels, and cover it with a lid. The heat causes the kernels to pop, and soon you have a pot full of popcorn. In the microwave, you can place kernels in a microwave-safe bowl with a cover and microwave until popping slows down.Seasoning options are vast, ranging from traditional salt and butter to more creative choices like caramel, cheese, or various spices. Popcorn can be a blank canvas for your flavor preferences.It's a versatile snack that can be enjoyed in countless settings, from movie theaters to home movie nights."
     },
     {
         "id": 7,
@@ -72,10 +78,11 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/drN8SWw/th-33.jpg",
         "price": 250,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 22,
         "made_by" : "Nikki",
         "origin" : "Indian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "A cheeseburger is an iconic American classic that combines the flavors of a beef patty with the creamy richness of cheese, typically served within a bun. The foundation of a cheeseburger is a ground beef patty, usually seasoned with salt and pepper. The beef patty can be cooked to various degrees of doneness, catering to personal preferences.The cheese, often cheddar, American, or Swiss, is placed on top of the hot patty, allowing it to melt and envelop the meat in a layer of gooey goodness. This step is crucial in making it a cheeseburger. The bun, typically a soft and slightly toasted sesame seed or plain hamburger bun, provides the vessel for the cheese-covered patty. The bun can be customized with condiments like ketchup, mustard, mayonnaise, and various toppings, including lettuce, tomato, onion, pickles, and bacon, allowing for endless variations and flavor profiles."
     },
     {
         "id": 8,
@@ -83,10 +90,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/PYYyzrM/th-34.jpg",
         "price": 350,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 7,
         "made_by" : "lily",
         "origin" : "Italian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Margherita pizza is a simple yet exquisite Italian classic known for its minimalistic ingredients and rich, traditional flavors. This iconic pizza is named after Queen Margherita of Italy and was created to honor her visit to Naples in the late 19th century. The base of a Margherita pizza is a thin, crispy crust, typically made from a combination of flour, yeast, water, and salt. The sauce is a key component, usually comprising crushed San Marzano tomatoes, olive oil, and a pinch of salt, delivering a vibrant and natural tomato flavor. Fresh mozzarella cheese is another essential ingredient. It's sliced or torn into small pieces and evenly distributed over the tomato sauce. The cheese melts beautifully during baking, creating a creamy, gooey layer. Fresh basil leaves, not only for flavor but also for a pop of vibrant green color, are scattered on top. These add a fragrant, aromatic touch to the pizza."
     },
     {
         "id": 9,
@@ -94,10 +102,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/NtkBf5Z/th-35.jpg",
         "price": 280,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 16,
         "made_by" : "Chakrabarty",
         "origin" : "Italian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Spaghetti Carbonara is a classic Roman pasta dish celebrated for its rich and creamy flavors. It's a straightforward yet luxurious recipe. The key components are pasta, eggs, Pecorino Romano or Parmesan cheese, pancetta or guanciale (cured pork), and black pepper. To prepare, spaghetti is cooked until al dente and then drained, reserving some of the pasta water. In a separate pan, the pancetta or guanciale is fried until crispy, rendering flavorful fat that's crucial for the sauce. In a bowl, eggs are whisked, and grated cheese is added to form a creamy mixture. This mixture is then combined with the cooked pasta and the crispy pancetta, allowing the heat from the pasta to create a velvety sauce, with the cheese and eggs binding everything together. The final touch is a generous amount of freshly ground black pepper, which adds a bold, aromatic flavor. Some chefs also add a splash of pasta water to create a silkier consistency."
     },
     {
         "id": 10,
@@ -105,10 +114,11 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/XCdV5sF/th-36.jpg",
         "price": 320,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 4,
         "made_by" : "Suvo",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "A chicken sandwich is a beloved and versatile dish that features a succulent chicken patty served within a bun. The star of the sandwich is the chicken, which can be prepared in various ways. Common options include a grilled, fried, or breaded and baked chicken breast or thigh.The bun is typically a soft and slightly toasted variety, such as a hamburger or brioche bun, providing a sturdy yet tender vessel for the chicken patty. Toppings and condiments play a crucial role in the chicken sandwich's flavor profile. These can include fresh lettuce, ripe tomatoes, pickles, onions, and various types of cheese. Sauces like mayonnaise, ketchup, mustard, and specialty sauces like ranch or barbecue are often added to enhance the taste. For a spicy kick, some chicken sandwiches are prepared with hot sauce or jalapeño slices. Coleslaw, bacon, or avocado are additional options to elevate the sandwich's texture and taste."
     },
     {
         "id": 11,
@@ -116,10 +126,11 @@
         "food_category": "healthy",
         "food_image": "https://i.ibb.co/LgzG18r/th-37.jpg",
         "price": 320,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 26,
         "made_by" : "Masum",
         "origin" : "Greece",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "A Greek salad, also known as Horiatiki, is a refreshing and vibrant Mediterranean dish known for its fresh and wholesome ingredients. This salad typically features diced cucumbers, ripe tomatoes, red onions, and bell peppers, offering a colorful and crunchy base. Kalamata olives and crumbled feta cheese are signature components that add a briny and creamy contrast to the salad. The dressing for a Greek salad is traditionally a simple combination of extra virgin olive oil, red wine vinegar, oregano, garlic, and a pinch of salt and pepper. This dressing infuses the salad with a tangy and aromatic flavor. To make a Greek salad, you start by chopping the vegetables and tossing them together in a large bowl. Then, you add the olives and crumbled feta cheese, drizzling the dressing over the top. Greek salads are often garnished with fresh oregano leaves and a sprinkling of pepper. They can be served as a side dish or as a standalone meal when accompanied by pita bread or grilled chicken or lamb."
     },
     {
         "id": 12,
@@ -127,10 +138,11 @@
         "food_category": "healthy",
         "food_image": "https://i.ibb.co/wNQQ9Ls/th-38.jpg",
         "price": 270,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 7,
         "made_by" : "Mohin",
         "origin" : "Indian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Fruit salad is a delightful and colorful dish that combines a variety of fresh fruits to create a sweet, refreshing, and nutritious treat. The ingredients in a fruit salad can be diverse, including seasonal and tropical fruits like watermelon, cantaloupe, pineapple, strawberries, blueberries, grapes, and citrus segments. The making of a fruit salad involves washing, peeling, and cutting the fruits into bite-sized pieces. The goal is to mix and match different textures and flavors to create a harmonious blend. To enhance the taste, a drizzle of citrus juice, such as lemon, lime, or orange, is often added to the fruit salad. The acidity not only enhances the flavors but also helps prevent the fruits from browning. Sugar or honey can be incorporated for additional sweetness, though many people prefer the natural sweetness of the fruits alone. Fresh mint leaves or a sprinkle of powdered sugar can be used for garnish."
     },
     {
         "id": 13,
@@ -138,10 +150,11 @@
         "food_category": "breakfast",
         "food_image": "https://i.ibb.co/hL5HSGP/th-39.jpg",
         "price": 280,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 8,
         "made_by" : "Suvo",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Pancakes are a beloved breakfast staple cherished for their simplicity and versatility. The core ingredients for making pancakes include flour, baking powder, salt, milk, eggs, and often a touch of sugar. These ingredients are combined to form a smooth, pourable batter. To prepare pancakes, a griddle or a non-stick skillet is heated over medium-high heat. A small amount of oil or butter is used to prevent sticking and create a golden, crispy edge. The pancake batter is ladled onto the hot surface, creating a round, flat cake. As the batter cooks, bubbles form on the surface, indicating it's time to flip the pancake. After flipping, it's cooked until both sides are golden brown, resulting in a fluffy, tender interior. Pancakes can be served with a wide range of toppings and accompaniments, from classic choices like maple syrup, butter, and fresh berries to more creative options like chocolate chips, whipped cream, or savory ingredients like bacon and cheese."
     },
     {
         "id": 14,
@@ -149,10 +162,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/sbRtfBD/th-40.jpg",
         "price": 380,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 19,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Spaghetti Bolognese is a beloved Italian pasta dish known for its rich and savory meat sauce. The key components of this classic recipe include ground meat, typically a combination of beef and pork, finely chopped vegetables like onions, carrots, and celery, and a mixture of tomato sauce, tomato paste, and sometimes red wine. To prepare Spaghetti Bolognese, you start by sautéing the finely diced vegetables in olive oil until they become tender. Then, the ground meat is added and browned, breaking it into small pieces as it cooks. Once the meat is browned, the tomato sauce, tomato paste, and red wine are incorporated, allowing the flavors to meld. The sauce is simmered for an extended period, which deepens its rich and robust taste. Spices and herbs like bay leaves, oregano, and basil are added for extra flavor. Some variations also include milk or cream, which imparts a velvety texture to the sauce."
     },
     {
         "id": 15,
@@ -160,10 +174,11 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/L5VWXJL/th-41.jpg",
         "price": 290,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 6,
         "made_by" : "Marry Jane",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "A hamburger, also known as a burger, is an iconic and universally loved sandwich that consists of several key elements. The foundation is a ground meat patty, typically made from beef, although variations with other meats, like chicken or veggie burgers, are common. The patty is seasoned with salt, pepper, and often additional ingredients to enhance its flavor. The meat patty is usually cooked on a grill, stovetop, or barbecue until it reaches the desired level of doneness, with options ranging from rare to well-done. The bun, typically a soft and slightly toasted variety like a sesame seed or brioche bun, provides the vessel for the patty. It's often slathered with condiments, such as ketchup, mustard, mayonnaise, and sometimes specialty sauces like barbecue or aioli."
     },
     {
         "id": 16,
@@ -171,10 +186,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/vkCfLS5/th-42.jpg",
         "price": 220,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 16,
         "made_by" : "Mili",
         "origin" : "Italian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Caprese salad is a classic Italian dish celebrated for its simplicity and fresh, vibrant flavors. The core ingredients include ripe tomatoes, fresh mozzarella cheese, and fragrant basil leaves. The dish embodies the colors of the Italian flag with its red, white, and green elements. To make a Caprese salad, tomatoes are sliced into rounds or wedges, and fresh mozzarella cheese is cut into slices or chunks. These components are artfully arranged on a plate or platter, alternating between the tomato, mozzarella, and fresh basil leaves. The salad is often drizzled with high-quality extra-virgin olive oil and balsamic vinegar, which adds richness and tang to the dish. A pinch of salt and freshly ground black pepper accentuates the flavors."
     },
     {
         "id": 17,
@@ -182,10 +198,11 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/Zf0TVxy/th-43.jpg",
         "price": 340,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 30,
         "made_by" : "Nila",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Sushi rolls are a popular and artful Japanese dish that combines vinegared rice, seaweed (nori), and a variety of fresh ingredients, creating a harmonious blend of flavors and textures. The core elements of sushi rolls typically include sushi rice, nori sheets, fish or seafood, vegetables, and condiments like soy sauce and wasabi. To make sushi rolls, sushi rice is seasoned with rice vinegar, sugar, and salt, creating a slightly sticky and seasoned base for the roll. Nori sheets are placed on a bamboo sushi rolling mat, and a thin layer of rice is spread evenly on top. Fresh ingredients like fish, shrimp, crab, avocado, cucumber, and tempura-fried items are added to the rice. These components offer diverse flavors and textures, and may be combined in countless ways to create unique rolls. The rolling process involves using the bamboo mat to tightly encase the ingredients in the nori and rice, creating a cylindrical shape. The roll is sliced into bite-sized pieces, typically served with soy sauce for dipping and pickled ginger and wasabi as accompaniments."
     },
     {
         "id": 18,
@@ -193,10 +210,11 @@
         "food_category": "lunch",
         "food_image": "https://i.ibb.co/1zPwHbQ/th-44.jpg",
         "price": 310,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 26,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Fried rice is a delicious and versatile dish that hails from Asian cuisine, known for its simple ingredients and quick preparation. The core components of fried rice include cooked rice, vegetables, proteins (such as chicken, shrimp, or tofu), eggs, and a savory sauce. To make fried rice, cooked rice, preferably cooled and slightly dry, is used as the base. It's stir-fried in a wok or skillet, which imparts a pleasing, slightly crispy texture. Vegetables like peas, carrots, bell peppers, and onions are commonly added for color and crunch. Protein choices, like diced chicken or shrimp, are stir-fried separately and then combined with the rice and vegetables. Scrambled eggs are often incorporated, creating ribbons of rich, fluffy texture within the dish. A savory sauce made from a mixture of soy sauce, oyster sauce, and sometimes other seasonings, like garlic or ginger, is drizzled over the fried rice. This sauce provides a depth of flavor and ties all the ingredients together."
     },
     {
         "id": 19,
@@ -204,10 +222,11 @@
         "food_category": "breakfast",
         "food_image": "https://i.ibb.co/bN4JYSj/th-45.jpg",
         "price": 240,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 22,
         "made_by" : "Shikha",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Granola is a versatile and nutritious breakfast and snack option known for its crunchy texture and satisfying flavor. The core ingredients of granola typically include rolled oats, nuts, seeds, honey or other sweeteners, and a variety of dried fruits. To make granola, rolled oats serve as the base, and they are combined with a mixture of nuts like almonds, pecans, or walnuts, and seeds such as pumpkin or sunflower seeds. These ingredients are often toasted in the oven to create a crispy, golden texture. A sweetener, often honey or maple syrup, is drizzled over the oat and nut mixture, helping it clump together and adding sweetness. Healthy fats, like coconut oil or olive oil, are sometimes used to enhance the texture and flavor. Dried fruits, such as raisins, cranberries, or apricots, are added for a burst of natural sweetness and chewiness after the granola is baked and cooled."
     },
     {
         "id": 20,
@@ -215,10 +234,11 @@
         "food_category": "japanese",
         "food_image": "https://i.ibb.co/yd9MBSz/th-46.jpg",
         "price": 150,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 8,
         "made_by" : "Chiku",
         "origin" : "Japanese",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Miso soup is a classic and flavorful Japanese dish made from a combination of simple ingredients. The core components of miso soup include miso paste, dashi (a stock made from seaweed and bonito flakes), and various additions like tofu, seaweed, and green onions. To prepare miso soup, dashi is created by simmering dried seaweed (kombu) and dried fish flakes (bonito) in water. This stock serves as the flavorful base for the soup. Miso paste, made from fermented soybeans or other legumes, is then dissolved in the dashi. Miso paste comes in various varieties, such as white (shiro) or red (aka), and its choice impacts the soup's depth of flavor. A variety of ingredients can be added to miso soup, including cubed tofu, sliced green onions, and small pieces of seaweed like wakame. These elements provide different textures and tastes to the soup."
     },
     {
         "id": 21,
@@ -226,10 +246,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/hYBWNPp/th-47.jpg",
         "price": 200,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 9,
         "made_by" : "Billal",
         "origin" : "Italian",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Tiramisu is a beloved Italian dessert renowned for its luxurious and indulgent flavors. The core ingredients of tiramisu include ladyfingers (sponge cake biscuits), espresso coffee, mascarpone cheese, eggs, sugar, and cocoa powder To create tiramisu, ladyfingers are briefly soaked in freshly brewed and cooled espresso coffee, which infuses them with a rich, aromatic flavor. These coffee-soaked ladyfingers form the base layer of the dessert. The creamy filling is made by combining mascarpone cheese with a mixture of egg yolks and sugar, creating a luscious and velvety texture. This creamy layer is spread over the coffee-soaked ladyfingers. The dessert is completed with a dusting of unsweetened cocoa powder, which adds a touch of bitterness and contrasts beautifully with the sweetness of the mascarpone layer."
     },
     {
         "id": 22,
@@ -237,10 +258,11 @@
         "food_category": "healthy",
         "food_image": "https://i.ibb.co/S3FCsyy/th-48.jpg",
         "price": 320,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 15,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Caesar salad is a popular and classic salad known for its bold flavors and creamy dressing. The key components of a Caesar salad typically include romaine lettuce, croutons, Parmesan cheese, Caesar dressing, and sometimes anchovies or anchovy paste. To make a Caesar salad, fresh and crisp romaine lettuce leaves are torn into bite-sized pieces and placed in a large salad bowl. Croutons, which are small cubes of toasted bread, are sprinkled over the lettuce to provide a satisfying crunch. A key element is the Caesar dressing, which is a creamy concoction made from ingredients like mayonnaise, Dijon mustard, garlic, lemon juice, olive oil, and grated Parmesan cheese. This dressing is drizzled over the lettuce and croutons. To add an extra layer of savory flavor, some variations of Caesar salad incorporate anchovies or anchovy paste into the dressing, creating a unique umami quality. The salad is often garnished with shaved or grated Parmesan cheese, which contributes a salty and nutty element to the dish."
     },
     {
         "id": 23,
@@ -248,10 +270,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/92RFwQG/th-49.jpg",
         "price": 360,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 17,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Mushroom risotto is a delectable Italian dish celebrated for its creamy texture and earthy, umami flavors. The key components of mushroom risotto include Arborio rice, mushrooms, onion or shallots, white wine, broth (often vegetable or chicken), butter, and Parmesan cheese.To prepare mushroom risotto, the Arborio rice is sautéed in butter or olive oil with finely chopped onion or shallots until the grains become translucent. This initial step, known as toasting the rice, enhances the rice's ability to absorb flavors. Sliced mushrooms, often a combination of wild mushrooms like shiitake, cremini, and porcini, are added and cooked until they release their rich, earthy aroma and become tender. White wine is poured into the mixture, and it is simmered until most of the liquid evaporates, allowing the wine to impart a subtle acidity and depth of flavor. The risotto is cooked by gradually adding warm broth, one ladle at a time, and stirring continuously. This process allows the rice to release its starches, creating the characteristic creamy consistency of risotto."
     },
     {
         "id": 24,
@@ -259,10 +282,11 @@
         "food_category": "snacks",
         "food_image": "https://i.ibb.co/9Y9g54x/th-50.jpg",
         "price": 280,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 27,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Fish tacos are a flavorful and beloved Mexican dish that combines crispy fish, fresh garnishes, and a variety of condiments within a soft tortilla shell. The core ingredients typically include white fish fillets (such as cod or tilapia), flour or corn tortillas, and an array of toppings and sauces. To make fish tacos, the fish fillets are usually seasoned with a blend of spices, like chili powder, cumin, and paprika, before being lightly battered or coated in breadcrumbs. They are then fried or grilled until they are crispy on the outside and tender on the inside. Tortillas, either soft corn or flour, serve as the foundation for the taco. They are often warmed on a grill or stovetop. Toppings for fish tacos are versatile and can include shredded lettuce, diced tomatoes, red onions, and fresh cilantro. Slices of avocado or guacamole, shredded cheese, and a drizzle of sour cream or a tangy lime crema are common additions. Sauces like salsa, pico de gallo, or a spicy chipotle mayo are used to enhance the flavor and provide a burst of zest."
     },
     {
         "id": 25,
@@ -270,10 +294,11 @@
         "food_category": "dinner",
         "food_image": "https://i.ibb.co/fkrhfy8/th-51.jpg",
         "price": 450,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 23,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Steak frites is a classic French dish celebrated for its simplicity and the indulgent combination of steak and crispy French fries. The dish consists of two primary components: a perfectly cooked steak and a side of golden, thin-cut fries. The steak, often a tender cut like ribeye or sirloin, is seasoned with salt and pepper before being cooked to the desired level of doneness. It can be pan-seared, grilled, or broiled, each method lending its own distinct flavor and texture to the meat. The fries, or frites in French, are typically made from russet potatoes, cut into thin strips, and double-fried to achieve a crispy exterior and a soft interior. The key is to maintain a perfect balance of crunch and tenderness. Steak frites are traditionally served with a side of bearnaise sauce or a simple green salad with a vinaigrette dressing. The rich, savory flavors of the steak are complemented by the crispy, golden fries, creating a satisfying and well-rounded meal."
     },
     {
         "id": 26,
@@ -281,10 +306,11 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/0QQB0kV/th-52.jpg",
         "price": 360,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 14,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Fried chicken is a beloved comfort food known for its crispy and flavorful exterior and tender, juicy interior. The key ingredients for making fried chicken typically include chicken pieces (often bone-in and skin-on), a seasoned coating, and oil for frying. To prepare fried chicken, the chicken pieces are first seasoned with a blend of salt, pepper, and often a mixture of spices such as paprika, garlic powder, and cayenne for added flavor. The seasoned chicken is then coated in a mixture of flour or a combination of flour and breadcrumbs, which creates the crispy crust when fried. The chicken is deep-fried in a pot or skillet filled with hot oil, typically until it turns golden brown and the internal temperature reaches a safe level. The result is a delectable contrast of textures, with the crispy coating giving way to the succulent, flavorful meat. Fried chicken can be customized with various seasonings and coatings, offering a wide range of flavor profiles."
     },
     {
         "id": 27,
@@ -292,10 +318,11 @@
         "food_category": "italian",
         "food_image": "https://i.ibb.co/SJVCL9x/th-53.jpg",
         "price": 390,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 16,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Chicken Alfredo is a creamy and indulgent Italian-American pasta dish that combines tender chicken, fettuccine pasta, and a rich Alfredo sauce. The key ingredients for Chicken Alfredo typically include boneless, skinless chicken breasts or thighs, fettuccine pasta, heavy cream, butter, Parmesan cheese, and seasonings like garlic, salt, and pepper. To prepare Chicken Alfredo, chicken pieces are usually sautéed in butter until they are cooked through and lightly browned. They are then set aside. Fettuccine pasta is cooked until al dente and drained, providing the base for the dish. The Alfredo sauce is created by simmering heavy cream with butter, garlic, and grated Parmesan cheese. The cheese melts into the cream, creating a luscious, velvety texture. The cooked pasta is combined with the Alfredo sauce, allowing the creamy mixture to coat the noodles. The sautéed chicken is then added, resulting in a sumptuous combination of flavors and textures."
     },
     {
         "id": 28,
@@ -303,10 +330,11 @@
         "food_category": "breakfast",
         "food_image": "https://i.ibb.co/PxGJthH/th-54.jpg",
         "price": 210,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 11,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "A yogurt parfait is a delightful and nutritious layered dessert or breakfast option that combines yogurt with various toppings and fruits. The key ingredients for a yogurt parfait include yogurt (usually Greek yogurt or regular yogurt), granola, fresh or dried fruits, and honey or a sweetener of choice. To create a yogurt parfait, it begins with a layer of creamy yogurt at the bottom of a glass or bowl. The yogurt can be plain, flavored, or infused with ingredients like honey or vanilla for added sweetness and depth of flavor. A layer of granola is added on top of the yogurt, providing a satisfying crunch and a contrast in texture. Fresh fruits like berries, sliced bananas, kiwi, or peaches are typically added to the parfait, creating a burst of color, flavor, and natural sweetness. Additional toppings can include dried fruits, nuts, seeds, or coconut flakes for extra texture and taste."
     },
     {
         "id": 29,
@@ -314,10 +342,11 @@
         "food_category": "dietfood",
         "food_image": "https://i.ibb.co/f2gzMMT/th-55.jpg",
         "price": 270,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 8,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Vegetable stir-fry is a versatile and healthy dish that combines an array of colorful vegetables, stir-fried in a savory sauce. The core ingredients for a vegetable stir-fry include a selection of vegetables, often including bell peppers, broccoli, carrots, snap peas, and mushrooms, along with a sauce made from soy sauce, garlic, ginger, and other seasonings. To make a vegetable stir-fry, the vegetables are sliced or chopped into bite-sized pieces. The key is to maintain their vibrant colors and crisp textures. A wok or a large skillet is heated, and a small amount of oil, typically sesame or vegetable oil, is used to stir-fry the vegetables over high heat. The goal is to cook them quickly, preserving their natural crunch and colors. The sauce, made by blending soy sauce, garlic, ginger, and other seasonings like rice vinegar or hoisin sauce, is drizzled over the stir-fried vegetables, infusing them with a rich and savory flavor. Protein options, such as tofu, chicken, beef, or shrimp, can be added to the stir-fry to create a well-balanced meal."
     },
     {
         "id": 30,
@@ -325,9 +354,10 @@
         "food_category": "fastfood",
         "food_image": "https://i.ibb.co/ZxYpyXH/th-56.jpg",
         "price": 350,
-        "quantity" : 0,
+        "count" : 0,
+        "quantity" : 9,
         "made_by" : "John Doll",
         "origin" : "Bangladesh",
-        "desc" : "bakfkdfshflhfhds"
+        "desc" : "Hawaiian pizza is a unique and divisive pizza variety known for its combination of sweet and savory flavors. The key ingredients for Hawaiian pizza typically include pizza dough, tomato sauce, mozzarella cheese, ham, and pineapple. To make a Hawaiian pizza, pizza dough is rolled out and spread with a layer of tomato sauce, which forms the base of the pizza. Mozzarella cheese is then sprinkled over the sauce, providing a gooey and melty layer. Slices of ham, often Canadian bacon or regular ham, are distributed across the pizza, creating a salty and savory component. One of the distinguishing features of Hawaiian pizza is the addition of pineapple chunks, which offer a sweet and tangy contrast to the other ingredients. The pizza is baked in an oven until the crust is golden and the cheese is bubbling and slightly browned."
     }
 ]

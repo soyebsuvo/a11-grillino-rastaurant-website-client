@@ -1,13 +1,16 @@
 import Button from '@mui/material/Button';
 import { styled } from '@mui/system';
 
-const LoginButton = styled(Button)(() => ({
+const DetailsButton = styled(Button)(() => ({
   backgroundColor: 'orange',
-  padding : '8px 20px',
+// border : "1px solid orange",
+  padding : '6px 20px',
+  borderRadius : '50px',
   color: 'white',
   '&:hover': {
     backgroundColor: 'orange !important',
+    color : 'white'
   },
 }));
 
-export default LoginButton;
+export default DetailsButton;
