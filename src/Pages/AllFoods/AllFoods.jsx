@@ -1,10 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import FoodCard from "../../components/FoodMenus/FoodCard";
 import { useLoaderData } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './allFoods.css'
 export default function AllFoods() {
+    const [foods , setFoods] = useState([])
     const {count} = useLoaderData()
     // console.log(count)
     const foodPerPage = 9;
@@ -12,30 +12,19 @@ export default function AllFoods() {
     const totalPage = Math.ceil(count / foodPerPage);
     const pages = [...Array(totalPage).keys()]
     console.log(pages)
-    const { data: foods, isLoading, isError, error , refetch} = useQuery({
-        queryKey: ['allFoods'],
-        queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}`);
-            return await res.data;
-        }
-    })
-    if (isLoading) {
-        return <div className="flex justify-center items-center h-[50vh]"><span className="loading loading-ring loading-lg"></span></div>
-    }
-    if (isError) {
-        console.log(error.message);
-        return;
-    }
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}`)
+        .then(res => setFoods(res.data))
+    } , [currentPage , foodPerPage])
     const handlePrev = () => {
         if(currentPage > 0){
             setCurrentPage(currentPage - 1)
-            refetch()
         }
     }
     const handleNext = () => {
         if(currentPage < totalPage - 1){
             setCurrentPage(currentPage + 1)
-            refetch()
         }
     }
     return (
