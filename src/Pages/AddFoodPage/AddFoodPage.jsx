@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import axios from "axios";
+
 
 export default function AddFoodPage() {
     const {user} = useContext(AuthContext);
@@ -7,16 +9,26 @@ export default function AddFoodPage() {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photo.value;
-        const brand = e.target.brand.value;
-        const type = e.target.type.value;
-        const rating = e.target.rating.value;
+        const userName = e.target.userName.value;
+        const userEmail = e.target.userEmail.value;
         const price = e.target.price.value;
+        const category = e.target.category.value;
+        const origin = e.target.origin.value;
+        const quantity = e.target.quantity.value;
         const desc = e.target.desc.value;
-        const product = {
-            name, photo, brand, type, rating, price, desc
+        const count = e.target?.count?.value || 0
+        const newFood = {
+            food_name : name, food_image : photo, count , userName, userEmail, food_category : category , origin , quantity , price, desc
         }
-        console.log(product)
-
+        console.log(newFood)
+        axios.post(`http://localhost:5000/foods` , newFood)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+        
     }
     return (
         <div className="px-3 md:px-32 py-8">

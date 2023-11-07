@@ -17,6 +17,20 @@ export default function FoodPurchasePage() {
     })
     const { food_name, food_image,  price } = food || {}
     // console.log("from purfkdhfdh" , food)
+    const handlePurchase = (e) => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
+        const userName = e.target.userName.value;
+        const userEmail = e.target.userEmail.value;
+        const date = e.target.date.value;
+        const price = e.target.price.value;
+        const quantity = e.target.quantity.value;
+        const purchasedFood = {
+            name , photo , userName , userEmail , date , price , quantity 
+        }
+        console.log(purchasedFood);
+    }
     return (
         <div className="px-3 md:px-32 py-8">
             <div className="text-center py-5">
@@ -25,7 +39,7 @@ export default function FoodPurchasePage() {
             </div>
             <div>
                 <div className="py-8">
-                    <form>
+                    <form onSubmit={handlePurchase}>
                         <div className="md:flex gap-4">
                             <div className="w-full">
                                 Food Name <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="name" id="name" placeholder="Food Name*" defaultValue={food_name} required readOnly />
@@ -56,7 +70,7 @@ export default function FoodPurchasePage() {
                                 </select>
                             </div> */}
                             <div className="w-full">
-                                Quantity <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="number" name="quantity" id="quantity" placeholder="Available Quantity" value={quantityValue} required readOnly/>
+                                Quantity <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="number" name="quantity" id="quantity" placeholder="Available Quantity" defaultValue={quantityValue} required readOnly/>
                             </div>
 
                             <div className="w-full">
