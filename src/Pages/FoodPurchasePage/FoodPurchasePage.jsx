@@ -15,7 +15,7 @@ export default function FoodPurchasePage() {
             return await res.data;
         }
     })
-    const { food_name, food_image,  price } = food || {}
+    const { food_name, food_image,  price , desc , count , category} = food || {}
     // console.log("from purfkdhfdh" , food)
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -27,7 +27,7 @@ export default function FoodPurchasePage() {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const purchasedFood = {
-            name , photo , userName , userEmail , date , price , quantity 
+            food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : category , origin , quantity , price, desc , date
         }
         console.log(purchasedFood);
     }
@@ -60,15 +60,6 @@ export default function FoodPurchasePage() {
                             <div className="w-full">
                                 Pick Date <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="date" name="date" id="date" required/>
                             </div>
-                            {/* <div className="w-full">
-                                <select className="w-full py-4 border-2 rounded-lg px-2 my-2" name="origin" id="origin" defaultValue={origin} required>
-                                    <option value="Bangladesh">Select Origin</option>
-                                    <option value="Bangladesh">Bangladesh</option>
-                                    <option value="Indian">Indian</option>
-                                    <option value="Japanese">Japanese</option>
-                                    <option value="Italian">Italian</option>
-                                </select>
-                            </div> */}
                             <div className="w-full">
                                 Quantity <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="number" name="quantity" id="quantity" placeholder="Available Quantity" defaultValue={quantityValue} required readOnly/>
                             </div>

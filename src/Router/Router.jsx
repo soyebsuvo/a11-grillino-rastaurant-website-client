@@ -9,6 +9,8 @@ import Register from "../Pages/Register/Register";
 import AddFoodPage from "../Pages/AddFoodPage/AddFoodPage";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import FoodPurchasePage from "../Pages/FoodPurchasePage/FoodPurchasePage";
+import MyAddedFoodItems from "../Pages/MyAddedFoodItems/MyAddedFoodItems";
+import UpdateFood from "../Pages/UpdateFood/UpdateFood";
 
 const router = createBrowserRouter([
     {
@@ -49,6 +51,14 @@ const router = createBrowserRouter([
         {
             path : '/purchase/:id',
             element : <FoodPurchasePage></FoodPurchasePage>
+        },
+        {
+            path : '/myAddedFood',
+            element : <MyAddedFoodItems></MyAddedFoodItems>
+        },
+        {
+            path : "/updateFood/:id",
+            element : <UpdateFood></UpdateFood>
         }
       ]
     },

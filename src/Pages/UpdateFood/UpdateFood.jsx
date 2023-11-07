@@ -1,11 +1,22 @@
-import { useContext } from "react";
-import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useContext } from "react"
+import { AuthContext } from "../../AuthProvider/AuthProvider"
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
-
-export default function AddFoodPage() {
-    const {user} = useContext(AuthContext);
-    const handleAddFood = e => {
+export default function UpdateFood() {
+    const { id } = useParams()
+    console.log(id)
+    const { data } = useQuery({
+        queryKey: ['updateFood'],
+        queryFn: async () => {
+            const res = await axios.get(`http://localhost:5000/food/${id}`);
+            return await res.data;
+        }
+    })
+    const { food_name, food_image, price, food_category, origin, quantity, desc } = data || {};
+    const { user } = useContext(AuthContext);
+    const handleUpdateFood = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
         const photo = e.target.photo.value;
@@ -17,18 +28,10 @@ export default function AddFoodPage() {
         const quantity = e.target.quantity.value;
         const desc = e.target.desc.value;
         const count = e.target?.count?.value || 0
-        const newFood = {
-            food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : category , origin , quantity , price, desc
+        const updated = {
+            food_name: name, food_image: photo, count, userName, userEmail, food_category: category, origin, quantity, price, desc
         }
-        console.log(newFood)
-        axios.post(`http://localhost:5000/foods` , newFood)
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(error => {
-            console.log(error)
-        })
-        
+        console.log(updated)
     }
     return (
         <div className="px-3 md:px-32 py-8">
@@ -38,18 +41,18 @@ export default function AddFoodPage() {
             </div>
             <div>
                 <div className="py-8">
-                    <form onSubmit={handleAddFood}>
+                    <form onSubmit={handleUpdateFood}>
                         <div className="md:flex gap-4">
-                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="name" id="name" placeholder="Food Name*" required/>
-                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="photo" id="photo" placeholder="Food Photo URL*" required/>
+                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="name" id="name" placeholder="Food Name*" defaultValue={food_name} required />
+                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="photo" id="photo" placeholder="Food Photo URL*" defaultValue={food_image} required />
                         </div>
                         <div className="md:flex gap-4">
                             <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="userName" id="userName" defaultValue={user?.displayName} readOnly />
-                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="email" name="userEmail" id="userEmail" defaultValue={user?.email} readOnly  placeholder="Email"/>
+                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="email" name="userEmail" id="userEmail" defaultValue={user?.email} readOnly placeholder="Email" />
                         </div>
                         <div className="md:flex gap-8">
                             <div className="w-full">
-                                <select className="w-full py-4 border-2 rounded-lg px-2 my-2" name="category" id="category" required>
+                                <select className="w-full py-4 border-2 rounded-lg px-2 my-2" name="category" id="category" defaultValue={food_category} required>
                                     <option value="breakfast">Select Category</option>
                                     <option value="breakfast">breakfast</option>
                                     <option value="dietfood">dietfood</option>
@@ -63,7 +66,7 @@ export default function AddFoodPage() {
                                 </select>
                             </div>
                             <div className="w-full">
-                                <select className="w-full py-4 border-2 rounded-lg px-2 my-2" name="origin" id="origin" required>
+                                <select className="w-full py-4 border-2 rounded-lg px-2 my-2" name="origin" id="origin" defaultValue={origin} required>
                                     <option value="Bangladesh">Select Origin</option>
                                     <option value="Bangladesh">Bangladesh</option>
                                     <option value="Indian">Indian</option>
@@ -72,16 +75,16 @@ export default function AddFoodPage() {
                                 </select>
                             </div>
                             <div className="w-full">
-                                <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="number" name="quantity" id="quantity" placeholder="Available Quantity" required/>
+                                <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="number" name="quantity" id="quantity" placeholder="Available Quantity" defaultValue={quantity} required />
                             </div>
-                            
-                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="price" id="price" placeholder="Price*" required/>
+
+                            <input className="w-full py-4 border-2 rounded-lg px-2 my-2" type="text" name="price" id="price" defaultValue={price} placeholder="Price*" required />
                         </div>
                         <div>
-                            <textarea className="w-full py-4 border-2 rounded-lg px-2 my-2 resize-none" name="desc" id="desc" cols="30" rows="5" placeholder="A short description of the food item ( ingredients, making procedure, etc. )" required></textarea>
+                            <textarea defaultValue={desc} className="w-full py-4 border-2 rounded-lg px-2 my-2 resize-none" name="desc" id="desc" cols="30" rows="5" placeholder="A short description of the food item ( ingredients, making procedure, etc. )" required></textarea>
                         </div>
                         <div>
-                            <input className="btn btn-block bg-orange-400 text-white hover:bg-transparent hover:border hover:border-orange-400 hover:text-orange-400" type="submit" value="Add Food Item" />
+                            <input className="btn btn-block bg-orange-400 text-white hover:bg-transparent hover:border hover:border-orange-400 hover:text-orange-400" type="submit" value="Update Food Item" />
                         </div>
                     </form>
                 </div>
