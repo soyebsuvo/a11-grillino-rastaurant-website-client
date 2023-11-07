@@ -6,11 +6,15 @@ import Blogs from "../Pages/Blogs/Blogs";
 import SingleFood from "../Pages/SingleFood/SingleFood";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AddFoodPage from "../Pages/AddFoodPage/AddFoodPage";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import FoodPurchasePage from "../Pages/FoodPurchasePage/FoodPurchasePage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement : <ErrorPage></ErrorPage>,
       children : [
         {
             path : '/',
@@ -37,6 +41,14 @@ const router = createBrowserRouter([
         {
             path : '/register',
             element : <Register></Register>
+        },
+        {
+            path : '/addFood',
+            element : <AddFoodPage></AddFoodPage>
+        },
+        {
+            path : '/purchase/:id',
+            element : <FoodPurchasePage></FoodPurchasePage>
         }
       ]
     },

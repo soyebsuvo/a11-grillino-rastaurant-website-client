@@ -9,6 +9,7 @@ export default function AuthProvider({ children }) {
     const githubProvider = new GithubAuthProvider();
     const [user, setUser] = useState(null)
     const [loading, isLoading] = useState(true)
+    const [quantityValue , setQuantityValue] = useState(1)
 
     const createUser = (email, password) => {
         isLoading(true);
@@ -33,6 +34,7 @@ export default function AuthProvider({ children }) {
     const logOut = () => {
         return signOut(auth);
     }
+    
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
@@ -44,7 +46,7 @@ export default function AuthProvider({ children }) {
         }
     }, [])
 
-    const authInfo = { user, loading , createUser, login, googleLogin, githubLogin , logOut}
+    const authInfo = { user, loading , createUser, login, googleLogin, githubLogin , logOut , quantityValue , setQuantityValue}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}
