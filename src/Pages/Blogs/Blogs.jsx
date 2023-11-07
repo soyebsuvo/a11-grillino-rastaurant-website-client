@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, TextField, Typography } from "@mui/material";
 import oneway from '../../assets/th58.jpeg';
 import nodenpm from '../../assets/th.jpeg';
 import diff from '../../assets/th1.jpeg';
+import first from '../../assets/2.jpg'
+import second from '../../assets/3.jpg'
+import third from '../../assets/4.jpg'
 export default function Blogs() {
     return (
         <div>
@@ -24,7 +27,7 @@ export default function Blogs() {
                                 alt="green iguana"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography gutterBottom variant="h6" component="div">
                                     What is One way data binding?
                                 </Typography>
                                 <Typography sx={{ marginBottom: '8px' }} variant="body2" color="text.secondary">
@@ -49,7 +52,7 @@ export default function Blogs() {
                                 alt="green iguana"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography gutterBottom variant="h6" component="div">
                                     What is NPM in node.js?
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
@@ -71,7 +74,7 @@ export default function Blogs() {
                                 alt="green iguana"
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
+                                <Typography gutterBottom variant="h6" component="div">
                                     Different between Mongodb database vs mySQL database.
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
@@ -82,8 +85,80 @@ export default function Blogs() {
                         </Card>
                     </div>
                 </div>
-                <div className="col-span-4">
-
+                <div className="col-span-4 px-8 py-4">
+                    <div className="p-3 rounded-lg">
+                        <TextField sx={{width :'100%' , border: 'none', outline: 'orange', backgroundColor: 'white' }} id="outlined-search" label="Search Posts.." type="search" />
+                    </div>
+                    <div className="rounded-lg p-3 mt-5">
+                        <h2 className="text-3xl font-bold my-4">Latest Posts</h2>
+                        <hr className="border-2 border-orange-500 w-20 my-5"/>
+                        <Card sx={{ display: 'flex' , flexDirection : 'row-reverse' , justifyContent : 'space-between', marginBottom : '12px'}}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ flex: '1 0 auto' }}>
+                                    <Typography variant="subtitle1">
+                                        Live From Space
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="text.secondary">
+                                        Mac Miller
+                                    </Typography>
+                                </CardContent>
+                                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                    
+                                </Box>
+                            </Box>
+                            <CardMedia
+                            className="flex-1"
+                                component="img"
+                                sx={{ width: '100px', height : '90px' }}
+                                image={first}
+                                alt="Live from space album cover"
+                            />
+                        </Card>
+                        <Card sx={{ display: 'flex' , flexDirection : 'row-reverse' , justifyContent : 'space-between', marginBottom : '12px'}}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ flex: '1 0 auto' }}>
+                                    <Typography variant="subtitle1">
+                                        Live From Space
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="text.secondary">
+                                        Mac Miller
+                                    </Typography>
+                                </CardContent>
+                                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                    
+                                </Box>
+                            </Box>
+                            <CardMedia
+                            className="flex-1"
+                                component="img"
+                                sx={{ width: '100px', height : '90px' }}
+                                image={second}
+                                alt="Live from space album cover"
+                            />
+                        </Card>
+                        <Card sx={{ display: 'flex' , flexDirection : 'row-reverse' , justifyContent : 'space-between', marginBottom : '12px'}}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                                <CardContent sx={{ flex: '1 0 auto' }}>
+                                    <Typography variant="subtitle1">
+                                        Live From Space
+                                    </Typography>
+                                    <Typography variant="subtitle1" color="text.secondary">
+                                        Mac Miller
+                                    </Typography>
+                                </CardContent>
+                                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                                    
+                                </Box>
+                            </Box>
+                            <CardMedia
+                            className="flex-1"
+                                component="img"
+                                sx={{ width: '100px', height : '90px' }}
+                                image={third}
+                                alt="Live from space album cover"
+                            />
+                        </Card>
+                    </div>
                 </div>
             </div>
         </div>

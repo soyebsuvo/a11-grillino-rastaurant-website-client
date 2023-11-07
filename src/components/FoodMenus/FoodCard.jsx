@@ -1,6 +1,7 @@
 import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import PropTypes from 'prop-types';
 import DetailsButton from "./DetailsButton";
+import { Link } from "react-router-dom";
 export default function FoodCard({ food }) {
     return (
         <Card>
@@ -45,7 +46,7 @@ export default function FoodCard({ food }) {
             </CardContent>
 
             <CardActions className="flex justify-end">
-                <DetailsButton variant="contained">Details</DetailsButton>
+                <Link to={`/food/${food?._id}`}><DetailsButton variant="contained">Details</DetailsButton></Link>
             </CardActions>
         </Card>
     )

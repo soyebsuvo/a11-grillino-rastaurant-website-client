@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import logo from '../../assets/light-Grili.svg'
 import './navbar.css'
 import { BiTime } from 'react-icons/bi';
@@ -43,7 +43,7 @@ export default function Navbar() {
                             <p className="text-md font-semibold">+88 &nbsp;017****445</p>
                         </div>
                     </div>
-                    <LoginButton variant="contained">Login</LoginButton>
+                    <Link to='/login'><LoginButton variant="contained">Login</LoginButton></Link>
                 </div>
             </div>
         </nav>

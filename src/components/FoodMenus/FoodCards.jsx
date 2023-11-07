@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function FoodCards() {
   const { data: foods, isLoading, isError, error } = useQuery({
-    queryKey: 'foods',
+    queryKey: ['foods'],
     queryFn: async () => {
       const res = await axios.get(`http://localhost:5000/foods`);
       return await res.data;

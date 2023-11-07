@@ -4,7 +4,7 @@ import FoodCard from "../../components/FoodMenus/FoodCard";
 
 export default function AllFoods() {
     const { data: foods, isLoading, isError, error } = useQuery({
-        queryKey: 'foods',
+        queryKey: ['allFoods'],
         queryFn: async () => {
             const res = await axios.get(`http://localhost:5000/foods`);
             return await res.data;
