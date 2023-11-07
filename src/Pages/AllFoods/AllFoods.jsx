@@ -1,12 +1,21 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import FoodCard from "../../components/FoodMenus/FoodCard";
-
+import { useLoaderData } from "react-router-dom";
+import { useState } from "react";
+import './allFoods.css'
 export default function AllFoods() {
-    const { data: foods, isLoading, isError, error } = useQuery({
+    const {count} = useLoaderData()
+    // console.log(count)
+    const foodPerPage = 9;
+    const [currentPage , setCurrentPage] = useState(0)
+    const totalPage = Math.ceil(count / foodPerPage);
+    const pages = [...Array(totalPage).keys()]
+    console.log(pages)
+    const { data: foods, isLoading, isError, error , refetch} = useQuery({
         queryKey: ['allFoods'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/foods`);
+            const res = await axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}`);
             return await res.data;
         }
     })
@@ -16,6 +25,18 @@ export default function AllFoods() {
     if (isError) {
         console.log(error.message);
         return;
+    }
+    const handlePrev = () => {
+        if(currentPage > 0){
+            setCurrentPage(currentPage - 1)
+            refetch()
+        }
+    }
+    const handleNext = () => {
+        if(currentPage < totalPage - 1){
+            setCurrentPage(currentPage + 1)
+            refetch()
+        }
     }
     return (
         <div className="px-20">
@@ -28,8 +49,13 @@ export default function AllFoods() {
                     foods?.map(food => <FoodCard key={food._id} food={food}></FoodCard>)
                 }
             </div>
-            <div>
-                helo
+            <div className="text-center py-4">
+                <p>{currentPage}</p>
+                <button onClick={handlePrev} className="px-4 py-2 rounded-sm mr-2 bg-orange-200 hover:bg-orange-400 duration-300">Prev</button>
+                {
+                    pages?.map(page => <button className={`px-4 py-2 rounded-sm mr-2 bg-orange-100 hover:bg-orange-400 duration-300 ${currentPage === page ? 'selected' : undefined}`} key={page}>{page + 1}</button>)
+                }
+                <button onClick={handleNext} className="px-4 py-2 rounded-sm mr-2 bg-orange-200 hover:bg-orange-400 duration-300">Next</button>
             </div>
         </div>
     )
