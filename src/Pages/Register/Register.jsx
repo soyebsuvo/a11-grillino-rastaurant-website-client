@@ -1,12 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
 import LoginButton from "../../components/Navbar/LoginButton";
-import loginImage from '../../assets/loginImage.jpg'
+import loginImage from '../../assets/loginImage.jpg';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import MyTextField from "../Login/MyTextField";
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 export default function Register() {
+    const { createUser , googleLogin , githubLogin} = useContext(AuthContext);
+    const handleRegister = e => {
+        e.preventDefault();
+        const name = e.target.name.value;
+        const photo = e.target.photo.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        const user = { name, photo, email, password };
+        console.log(user)
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+    const otherLogin = (media) => {
+        media()
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error)
+        })
+    }
     return (
         <div className="py-8">
             <div className="hero min-h-screen px-20">
@@ -18,14 +46,14 @@ export default function Register() {
                         <div>
                             <h3 className="text-xl font-bold text-center mb-6">Sign In With</h3>
                             <div className="flex justify-center gap-5 mt-3">
-                                <span className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Google</span><FcGoogle className="text-3xl"></FcGoogle></span>
-                                <span className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Github</span><FaGithub className="text-3xl"></FaGithub></span>
+                                <span onClick={() => otherLogin(googleLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Google</span><FcGoogle className="text-3xl"></FcGoogle></span>
+                                <span onClick={() => otherLogin(githubLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Github</span><FaGithub className="text-3xl"></FaGithub></span>
                             </div>
                         </div>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm">
                         <h1 className="text-5xl font-bold text-center my-4 mb-8">Sign In now!</h1>
-                        <form className="">
+                        <form onSubmit={handleRegister} className="">
                             <div className="form-control">
                                 <MyTextField
                                     type="text"
