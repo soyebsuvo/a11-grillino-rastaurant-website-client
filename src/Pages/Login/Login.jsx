@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginButton from "../../components/Navbar/LoginButton";
 import MyTextField from "./MyTextField";
 import loginImage from '../../assets/loginImage.jpg'
@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 export default function Login() {
+    const navigate = useNavigate();
     const {login , googleLogin , githubLogin} = useContext(AuthContext);
     const handleLogin = e => {
         e.preventDefault();
@@ -17,6 +18,7 @@ export default function Login() {
         login(email , password)
         .then(result => {
             console.log(result.user)
+            navigate('/')
         })
         .catch(error => [
             console.log(error)
@@ -26,6 +28,7 @@ export default function Login() {
         media()
         .then(result => {
             console.log(result.user)
+            navigate('/')
         })
         .catch(error => {
             console.log(error)

@@ -3,15 +3,27 @@ import logo from '../../assets/light-Grili.svg'
 import './navbar.css'
 import { BiTime } from 'react-icons/bi';
 import LoginButton from "./LoginButton"
+import  { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
 export default function Navbar() {
+    const { user , logOut} = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/allfooditems'>All Food Items</NavLink></li>
         <li><NavLink to='/blogs'>Blogs</NavLink></li>
         <li className="md:hidden"><NavLink to='/login'>
             <LoginButton variant="contained">Login</LoginButton>
-            </NavLink></li>
+        </NavLink></li>
     </>
+    const handleLogOut = () => {
+        logOut()
+        .then(res => {
+            console.log(res)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
     return (
         <nav className="shadow-lg bg-white py-4">
             <div className="md:flex items-center justify-between bg-base-100 px-2 md:px-12">
@@ -36,14 +48,26 @@ export default function Navbar() {
                 <div className="hidden md:flex gap-12">
                     <div className="flex justify-center items-center gap-3">
                         <div>
-                            <BiTime className="text-4xl text-orange-400"></BiTime>
+                            <BiTime onClick={handleLogOut} className="text-4xl text-orange-400"></BiTime>
                         </div>
                         <div>
                             <p className="text-sm font-bold">Call for Order</p>
                             <p className="text-md font-semibold">+88 &nbsp;017****445</p>
                         </div>
                     </div>
-                    <Link to='/login'><LoginButton variant="contained">Login</LoginButton></Link>
+                    {user ? <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img src={user?.photoURL} />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                            <li className="hover:underline font-bold"><a>My added food items</a></li>
+                            <li className="hover:underline font-bold"><a>Add a food item</a></li>
+                            <li className="hover:underline font-bold"><a>My ordered food items</a></li>
+                            <li className="" onClick={handleLogOut}><a><LoginButton>Log Out</LoginButton></a></li>
+                        </ul>
+                    </div> : <Link to='/login'><LoginButton variant="contained">Login</LoginButton></Link>}
                 </div>
             </div>
         </nav>

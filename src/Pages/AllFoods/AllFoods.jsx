@@ -28,6 +28,9 @@ export default function AllFoods() {
                     foods?.map(food => <FoodCard key={food._id} food={food}></FoodCard>)
                 }
             </div>
+            <div>
+                helo
+            </div>
         </div>
     )
 }
