@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 
 export default function Register() {
-    const { createUser, googleLogin, githubLogin } = useContext(AuthContext);
+    const { createUser, googleLogin, githubLogin , update} = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = e => {
         e.preventDefault();
@@ -24,6 +24,8 @@ export default function Register() {
         createUser(email, password)
             .then(() => {
                 toast.success('Successfully Signed In!');
+                update(name , photo)
+                .then().catch()
                 navigate('/')
             })
             .catch(error => {

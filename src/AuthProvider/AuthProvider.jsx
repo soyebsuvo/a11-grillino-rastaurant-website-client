@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react"
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import axios from "axios";
 
@@ -36,6 +36,13 @@ export default function AuthProvider({ children }) {
         isLoading(true)
         return signOut(auth);
     }
+
+    const update = ( name , photo ) => {
+        return updateProfile(auth.currentUser , {
+            displayName : name,
+            photoURL : photo
+        })
+    }
     
 
     useEffect(() => {
@@ -52,9 +59,9 @@ export default function AuthProvider({ children }) {
         return () => {
             unSubscribe()
         }
-    }, [])
+    }, [user?.email])
 
-    const authInfo = { user, loading , createUser, login, googleLogin, githubLogin , logOut , quantityValue , setQuantityValue}
+    const authInfo = { user, loading , update , createUser, login, googleLogin, githubLogin , logOut , quantityValue , setQuantityValue}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

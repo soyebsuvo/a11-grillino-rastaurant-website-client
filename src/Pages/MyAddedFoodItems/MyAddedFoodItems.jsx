@@ -1,16 +1,18 @@
 import { useQuery } from "@tanstack/react-query"
-import axios from "axios"
+// import axios from "axios"
 import { useContext } from "react"
 import { AuthContext } from "../../AuthProvider/AuthProvider"
 import MyAddedFoodItem from "./MyAddedFoodItem";
 import { Helmet } from "react-helmet-async";
+import useAxiosSecure from "../../components/AxiosSecure/useAxiosSecure";
 
 export default function MyAddedFoodItems() {
+    const axiosSecure = useAxiosSecure();
     const { user } = useContext(AuthContext);
     const { data: foods, isLoading, isError, error, refetch } = useQuery({
         queryKey: ['myfoods'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/foodss?email=${user?.email}` , {withCredentials : true});
+            const res = await axiosSecure.get(`http://localhost:5000/foodss?email=${user?.email}` , {withCredentials : true});
             return await res.data;
         }
     })

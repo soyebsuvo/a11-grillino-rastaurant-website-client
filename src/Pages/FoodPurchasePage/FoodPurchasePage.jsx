@@ -2,12 +2,13 @@ import { useContext } from "react"
 import { AuthContext } from "../../AuthProvider/AuthProvider"
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 export default function FoodPurchasePage() {
     const { quantityValue } = useContext(AuthContext);
+    const navigate = useNavigate();
     const params = useParams();
     const { user } = useContext(AuthContext);
     const { data: food } = useQuery({
@@ -39,6 +40,9 @@ export default function FoodPurchasePage() {
                     'Food Purchased Successfully!',
                     'success'
                   )
+                  e.target.reset()
+                  navigate('/orderedItems')
+
             }
         })
         .catch(error => {
