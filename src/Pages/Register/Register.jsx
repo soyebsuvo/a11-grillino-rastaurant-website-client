@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function Register() {
     const { createUser, googleLogin, githubLogin , update} = useContext(AuthContext);
@@ -19,10 +20,15 @@ export default function Register() {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const user = { name, photo, email, password };
-        console.log(user)
         createUser(email, password)
-            .then(() => {
+            .then((res) => {
+                const newUser = {
+                    name : res?.user?.displayName,
+                    email : res?.user?.email,
+                    photo : res?.user?.photoURL
+                }
+                axios.post(`http://localhost:5000/users` , newUser)
+                .then().catch(err => console.log(err))
                 toast.success('Successfully Signed In!');
                 update(name , photo)
                 .then().catch()
@@ -32,11 +38,19 @@ export default function Register() {
                 console.log(error)
                 toast.error('Something went wrong!');
             })
+        
     }
     const otherLogin = (media) => {
         media()
-            .then(() => {
+            .then((res) => {
                 toast.success('Successfully Signed In!');
+                const newUser = {
+                    name : res?.user?.displayName,
+                    email : res?.user?.email,
+                    photo : res?.user?.photoURL
+                }
+                axios.post(`http://localhost:5000/users` , newUser)
+                .then().catch(err => console.log(err))
                 navigate('/')
             })
             .catch(error => {

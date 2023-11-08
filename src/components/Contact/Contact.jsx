@@ -24,7 +24,7 @@ export default function Contact() {
                 <div className="md:w-1/2 p-8">
                     <h2 className="text-4xl font-open-sans font-bold mb-6">We are here for help you! Arrange a meeting.</h2>
                     <p className="text-sm mb-6">Holisticly engage inexpensive architectures via high-quality solutions. Efficiently implement synergistic applications vis-a-vis best-of-breed e-commerce onotonectally enable client-based portals</p>
-                    <h3 className="text-2xl font-open-sans">Opening Hours</h3>
+                    <h3 className="text-2xl font-open-sans font-bold">Opening Hours</h3>
                     <div className="flex justify-between py-3">
                         <p className="text-gray-500">Saturday</p>
                         <p className="text-gray-500">11AM - 6PM</p>

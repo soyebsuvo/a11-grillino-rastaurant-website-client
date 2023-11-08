@@ -18,7 +18,7 @@ export default function FoodPurchasePage() {
             return await res.data;
         }
     })
-    const { _id , food_name, food_image,  price , desc , count , food_category} = food || {}
+    const { _id , food_name, food_image,  price , desc , count ,  food_category} = food || {}
     // console.log("from purfkdhfdh" , food)
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -49,7 +49,7 @@ export default function FoodPurchasePage() {
             console.log(error)
         })
 
-        axios.patch(`http://localhost:5000/food/${_id}` , {count : count + 1})
+        axios.patch(`http://localhost:5000/food/${_id}` , {count : count + quantityValue , quantity : food?.quantity - quantityValue})
         .then(res => {
             console.log(res.data)
         })

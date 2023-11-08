@@ -12,9 +12,9 @@ export default function Navbar() {
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/allfooditems'>All Food Items</NavLink></li>
         <li><NavLink to='/blogs'>Blogs</NavLink></li>
-        <li className="md:hidden"><NavLink to='/login'>
+        {/* <li className="md:hidden"><NavLink to='/login'>
             <LoginButton variant="contained">Login</LoginButton>
-        </NavLink></li>
+        </NavLink></li> */}
     </>
     const handleLogOut = () => {
         logOut()
@@ -35,6 +35,19 @@ export default function Navbar() {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52">
                             {links}
+                            {user ? <div className="dropdown dropdown-end">
+                                <label tabIndex={1} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-12 rounded-full">
+                                        <img src={user?.photoURL} />
+                                    </div>
+                                </label>
+                                <ul tabIndex={1} className="mt-3 z-[2] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                                    <Link to='/myAddedFood'><li><a>My added food items</a></li></Link>
+                                    <Link to='/addFood'><li><a>Add a food item</a></li></Link>
+                                    <Link to='/orderedItems'><li><a>My ordered food items</a></li></Link>
+                                    <li onClick={handleLogOut}><a><LoginButton>Log Out</LoginButton></a></li>
+                                </ul>
+                            </div> : <Link to='/login'><LoginButton variant="contained">Login</LoginButton></Link>}
                         </ul>
                     </div>
                     <a className="cursor-pointer hover:decoration-neutral normal-case text-xl">

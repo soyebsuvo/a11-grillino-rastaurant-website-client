@@ -9,6 +9,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
+import axios from "axios";
 
 export default function Login() {
     const location = useLocation();
@@ -29,8 +30,15 @@ export default function Login() {
     }
     const otherLogin = (media) => {
         media()
-        .then(() => {
+        .then((res) => {
             toast.success('Successfully Logged In!');
+            const newUser = {
+                name : res?.user?.displayName,
+                email : res?.user?.email,
+                photo : res?.user?.photoURL
+            }
+            axios.post(`http://localhost:5000/users` , newUser)
+            .then().catch(err => console.log(err))
             navigate(location.state ? location.state : '/')
         })
         .catch(error => {

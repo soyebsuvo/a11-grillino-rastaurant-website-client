@@ -41,7 +41,7 @@ export default function MyOrderedItem({food , refetch}) {
                         Category - {food?.food_category}
                     </Typography>
                     <Typography variant="subtitle1">
-                        Available - {food?.quantity}
+                        I Ordered - {food?.quantity}
                     </Typography>
                 </div>
                 <div className="flex justify-between pb-3">
@@ -49,7 +49,7 @@ export default function MyOrderedItem({food , refetch}) {
                         Made By - {food?.made_by}
                     </Typography>
                     <Typography variant="subtitle1">
-                        Ordered - {food?.count}
+                        Total Sold - {food?.count}
                     </Typography>
                 </div>
                 {
