@@ -13,7 +13,7 @@ export default function AllFoods() {
     const pages = [...Array(totalPage).keys()]
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}`)
+        axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}` , {withCredentials : true})
         .then(res => setFoods(res.data))
     } , [currentPage , foodPerPage])
     const handlePrev = () => {

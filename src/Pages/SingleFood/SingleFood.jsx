@@ -3,6 +3,7 @@ import LoginButton from "../../components/Navbar/LoginButton";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 export default function SingleFood() {
     const {setQuantityValue} = useContext(AuthContext)
@@ -15,7 +16,11 @@ export default function SingleFood() {
         }
     }
     const handlePlus = () => {
-        setQuantity(quantity + 1)
+        if(food?.quantity > quantity){
+            setQuantity(quantity + 1)
+        }else{
+            toast.error('You can not Order more than available quantity')
+        }        
         // setQuantityValue(quantity)
     }
     const handleSetQuantity = () => {

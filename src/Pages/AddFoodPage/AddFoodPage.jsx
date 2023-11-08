@@ -3,10 +3,12 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 
 export default function AddFoodPage() {
     const {user} = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleAddFood = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -32,6 +34,7 @@ export default function AddFoodPage() {
                     'Food Items Added Successfully!',
                     'success'
                   )
+                  navigate('/myAddedFood')
             }
         })
         .catch(error => {

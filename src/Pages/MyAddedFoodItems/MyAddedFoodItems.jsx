@@ -10,7 +10,7 @@ export default function MyAddedFoodItems() {
     const { data: foods, isLoading, isError, error, refetch } = useQuery({
         queryKey: ['myfoods'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/foodss?email=${user?.email}`);
+            const res = await axios.get(`http://localhost:5000/foodss?email=${user?.email}` , {withCredentials : true});
             return await res.data;
         }
     })

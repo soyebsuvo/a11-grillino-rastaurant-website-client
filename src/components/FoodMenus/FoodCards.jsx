@@ -8,7 +8,7 @@ export default function FoodCards() {
   const { data: foods, isLoading, isError, error } = useQuery({
     queryKey: ['foods'],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/foods`);
+      const res = await axios.get(`http://localhost:5000/foods`  , { withCredentials : true});
       return await res.data;
     }
   })
