@@ -3,6 +3,7 @@ import axios from "axios"
 import { useContext } from "react"
 import { AuthContext } from "../../AuthProvider/AuthProvider"
 import MyAddedFoodItem from "./MyAddedFoodItem";
+import { Helmet } from "react-helmet-async";
 
 export default function MyAddedFoodItems() {
     const { user } = useContext(AuthContext);
@@ -23,6 +24,9 @@ export default function MyAddedFoodItems() {
     }
     return (
         <div className="px-20">
+            <Helmet>
+                <title>Grillino | My Added Food</title>
+            </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">My Added Food Items</h2>

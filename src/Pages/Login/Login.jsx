@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LoginButton from "../../components/Navbar/LoginButton";
 import MyTextField from "./MyTextField";
 import loginImage from '../../assets/loginImage.jpg'
@@ -7,8 +7,10 @@ import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 export default function Login() {
+    const location = useLocation();
     const navigate = useNavigate();
     const {login , googleLogin , githubLogin} = useContext(AuthContext);
     const handleLogin = e => {
@@ -18,7 +20,7 @@ export default function Login() {
         login(email , password)
         .then(result => {
             console.log(result.user)
-            navigate('/')
+            navigate(location.state ? location.state : '/')
         })
         .catch(error => [
             console.log(error)
@@ -28,7 +30,8 @@ export default function Login() {
         media()
         .then(result => {
             console.log(result.user)
-            navigate('/')
+            navigate(location.state ? location.state : '/')
+
         })
         .catch(error => {
             console.log(error)
@@ -36,6 +39,9 @@ export default function Login() {
     }
     return (
         <div className="py-8">
+            <Helmet>
+                <title>Grillino | Login</title>
+            </Helmet>
             <div className="hero min-h-screen px-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">

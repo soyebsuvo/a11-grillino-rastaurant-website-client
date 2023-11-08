@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider"
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function UpdateFood() {
     const { id } = useParams()
@@ -35,6 +36,9 @@ export default function UpdateFood() {
     }
     return (
         <div className="px-3 md:px-32 py-8">
+            <Helmet>
+                <title>Grillino | Update Food</title>
+            </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">Add Food Item</h2>

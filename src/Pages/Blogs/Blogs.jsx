@@ -6,9 +6,13 @@ import diff from '../../assets/th1.jpeg';
 import first from '../../assets/2.jpg'
 import second from '../../assets/3.jpg'
 import third from '../../assets/4.jpg'
+import { Helmet } from "react-helmet-async";
 export default function Blogs() {
     return (
         <div>
+            <Helmet>
+                <title>Grillino | Blogs</title>
+            </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">My Blogs</h2>

@@ -64,7 +64,7 @@ export default function Navbar() {
                         <ul tabIndex={2} className="mt-3 z-[2] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
                             <Link to='/myAddedFood'><li><a>My added food items</a></li></Link>
                             <Link to='/addFood'><li><a>Add a food item</a></li></Link>
-                            <li><a>My ordered food items</a></li>
+                            <Link to='/orderedItems'><li><a>My ordered food items</a></li></Link>
                             <li onClick={handleLogOut}><a><LoginButton>Log Out</LoginButton></a></li>
                         </ul>
                     </div> : <Link to='/login'><LoginButton variant="contained">Login</LoginButton></Link>}

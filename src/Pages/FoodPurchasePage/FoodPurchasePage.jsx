@@ -3,6 +3,7 @@ import { AuthContext } from "../../AuthProvider/AuthProvider"
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function FoodPurchasePage() {
     const { quantityValue } = useContext(AuthContext);
@@ -15,7 +16,7 @@ export default function FoodPurchasePage() {
             return await res.data;
         }
     })
-    const { food_name, food_image,  price , desc , count , category} = food || {}
+    const { food_name, food_image,  price , desc , count , food_category} = food || {}
     // console.log("from purfkdhfdh" , food)
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -27,12 +28,22 @@ export default function FoodPurchasePage() {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const purchasedFood = {
-            food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : category , origin , quantity , price, desc , date
+            food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : food_category , origin , quantity , price, desc , date
         }
         console.log(purchasedFood);
+        axios.post(`http://localhost:5000/orders` , purchasedFood)
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
     return (
         <div className="px-3 md:px-32 py-8">
+            <Helmet>
+                <title>Grillino | Purchase Food</title>
+            </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">Purchase Food</h2>

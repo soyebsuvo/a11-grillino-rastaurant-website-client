@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginButton from "../../components/Navbar/LoginButton";
 import loginImage from '../../assets/loginImage.jpg';
 import { FcGoogle } from 'react-icons/fc';
@@ -7,9 +7,11 @@ import { FaGithub } from 'react-icons/fa';
 import MyTextField from "../Login/MyTextField";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 export default function Register() {
     const { createUser , googleLogin , githubLogin} = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -21,6 +23,7 @@ export default function Register() {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                navigate('/')
             })
             .catch(error => {
                 console.log(error)
@@ -30,6 +33,7 @@ export default function Register() {
         media()
         .then(result => {
             console.log(result.user)
+            navigate('/')
         })
         .catch(error => {
             console.log(error)
@@ -37,6 +41,9 @@ export default function Register() {
     }
     return (
         <div className="py-8">
+            <Helmet>
+                <title>Grillino | Register</title>
+            </Helmet>
             <div className="hero min-h-screen px-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">

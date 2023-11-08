@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router-dom"
 import LoginButton from "../../components/Navbar/LoginButton";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 export default function SingleFood() {
     const {setQuantityValue} = useContext(AuthContext)
@@ -23,6 +24,9 @@ export default function SingleFood() {
     }
     return (
         <div className="py-14">
+            <Helmet>
+                <title>Grillino | Food Details</title>
+            </Helmet>
             <div className="flex gap-8 px-16">
                 <div className="flex-1">
                     <img src={food?.food_image} alt="food" className="w-full" />

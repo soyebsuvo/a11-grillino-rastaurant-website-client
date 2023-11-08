@@ -32,6 +32,7 @@ export default function AuthProvider({ children }) {
     }
 
     const logOut = () => {
+        isLoading(true)
         return signOut(auth);
     }
     

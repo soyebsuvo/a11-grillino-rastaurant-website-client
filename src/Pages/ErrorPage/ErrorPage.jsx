@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom'
 import error from '../../assets/error.jpeg'
 import LoginButton from '../../components/Navbar/LoginButton'
+import { Helmet } from 'react-helmet-async'
 export default function ErrorPage() {
     return (
         <div className='h-[70vh] flex justify-center items-center'>
+            <Helmet>
+                <title>Grillino | Error Occuared</title>
+            </Helmet>
             <div>
                 <div className='flex justify-center'>
                     <img src={error} alt="Error" />

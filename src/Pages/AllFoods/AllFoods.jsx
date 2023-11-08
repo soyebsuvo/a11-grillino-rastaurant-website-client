@@ -3,6 +3,7 @@ import FoodCard from "../../components/FoodMenus/FoodCard";
 import { useLoaderData } from "react-router-dom";
 import { useEffect, useState } from "react";
 import './allFoods.css'
+import { Helmet } from "react-helmet-async";
 export default function AllFoods() {
     const [foods , setFoods] = useState([])
     const {count} = useLoaderData()
@@ -11,7 +12,6 @@ export default function AllFoods() {
     const [currentPage , setCurrentPage] = useState(0)
     const totalPage = Math.ceil(count / foodPerPage);
     const pages = [...Array(totalPage).keys()]
-    console.log(pages)
 
     useEffect(() => {
         axios.get(`http://localhost:5000/foodsByPage?skip=${currentPage}&limit=${foodPerPage}`)
@@ -29,6 +29,9 @@ export default function AllFoods() {
     }
     return (
         <div className="px-20">
+            <Helmet>
+                <title>Grillino | All Foods</title>
+            </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">Our All Food Menu</h2>
