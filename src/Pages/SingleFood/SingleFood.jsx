@@ -32,7 +32,7 @@ export default function SingleFood() {
                 <title>Grillino | Food Details</title>
                 <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
-            <div className="flex gap-8 px-16">
+            <div className="flex flex-col md:flex-row gap-8 px-4 md:px-16">
                 <div className="flex-1">
                     <img src={food?.food_image} alt="food" className="w-full" />
                 </div>
@@ -52,7 +52,7 @@ export default function SingleFood() {
                     <Link to={`/purchase/${food?._id}`}><LoginButton onClick={handleSetQuantity}>Order</LoginButton></Link>
                 </div>
             </div>
-            <div className="px-16">
+            <div className="px-4 md:px-16">
                 <h2 className="font-bold text-4xl my-6">Description</h2>
                 <p>{food?.desc}</p>
             </div>

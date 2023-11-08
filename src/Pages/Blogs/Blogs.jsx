@@ -18,7 +18,7 @@ export default function Blogs() {
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
                 <h2 className="font-open-sans text-4xl font-bold">My Blogs</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-12 px-20 py-6">
+            <div className="grid grid-cols-1 md:grid-cols-12 px-3 md:px-20 py-6">
                 <div className="col-span-8 space-y-12">
                     {/* first blog */}
                     <div>

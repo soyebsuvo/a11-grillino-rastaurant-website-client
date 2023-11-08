@@ -27,7 +27,7 @@ export default function AllFoods() {
         }
     }
     return (
-        <div className="px-20">
+        <div className="px-8 md:px-20">
             <Helmet>
                 <title>Grillino | All Foods</title>
                 <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
