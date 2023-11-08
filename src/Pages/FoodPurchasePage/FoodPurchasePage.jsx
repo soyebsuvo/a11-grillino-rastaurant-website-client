@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+import toast from "react-hot-toast";
 
 export default function FoodPurchasePage() {
     const { quantityValue } = useContext(AuthContext);
@@ -22,6 +23,10 @@ export default function FoodPurchasePage() {
     // console.log("from purfkdhfdh" , food)
     const handlePurchase = (e) => {
         e.preventDefault();
+        if(food?.quantity <= 0){
+            toast.error("You can not buy this because this item is not in stock");
+            return;
+        }
         const name = e.target.name.value;
         const photo = e.target.photo.value;
         const userName = e.target.userName.value;

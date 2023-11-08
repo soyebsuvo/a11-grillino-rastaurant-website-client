@@ -43,7 +43,8 @@ export default function SingleFood() {
                     <p className="font-bold text-gray-500 my-1">Made By - {food?.made_by}</p>
                     <p className="font-bold text-gray-500 my-1">Available Quantity - {food?.quantity}</p>
                     <p className="font-bold text-gray-500 my-1">Sold - {food?.count}</p>
-                    <div className="flex items-center py-8">
+                    <p className="pt-8 font-bold text-gray-500 my-1">Insert here how many items you want to buy</p>
+                    <div className="flex items-center pb-8">
                         <p className="mr-3">Quantity : </p>
                         <button onClick={handleMinus} className="py-2 px-4 bg-orange-100 border border-orange-100 hover:bg-orange-400 duration-300 rounded-sm hover:text-white">-</button>
                         <input className="py-2 text-center w-12 border border-orange-100" type="number" name="quntity" id="quantity" value={quantity} />

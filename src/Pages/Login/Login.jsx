@@ -14,36 +14,38 @@ import axios from "axios";
 export default function Login() {
     const location = useLocation();
     const navigate = useNavigate();
-    const {login , googleLogin , githubLogin} = useContext(AuthContext);
+    const { login, googleLogin, githubLogin } = useContext(AuthContext);
     const handleLogin = e => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
-        login(email , password)
-        .then(() => {
-            toast.success('Successfully Logged In!');
-            navigate(location.state ? location.state : '/')
-        })
-        .catch(error => [
-            console.log(error)
-        ])
+        login(email, password)
+            .then(() => {
+                toast.success('Successfully Logged In!');
+                navigate(location.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error)
+                toast.error("Email and Password doesn't match")
+            })
     }
     const otherLogin = (media) => {
         media()
-        .then((res) => {
-            toast.success('Successfully Logged In!');
-            const newUser = {
-                name : res?.user?.displayName,
-                email : res?.user?.email,
-                photo : res?.user?.photoURL
-            }
-            axios.post(`http://localhost:5000/users` , newUser)
-            .then().catch(err => console.log(err))
-            navigate(location.state ? location.state : '/')
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then((res) => {
+                toast.success('Successfully Logged In!');
+                const newUser = {
+                    name: res?.user?.displayName,
+                    email: res?.user?.email,
+                    photo: res?.user?.photoURL
+                }
+                axios.post(`http://localhost:5000/users`, newUser)
+                    .then().catch(err => console.log(err))
+                navigate(location.state ? location.state : '/')
+            })
+            .catch(error => {
+                console.log(error)
+                toast.error('something going wrong')
+            })
     }
     return (
         <div className="py-8">
@@ -60,8 +62,8 @@ export default function Login() {
                         <div>
                             <h3 className="text-xl font-bold text-center mb-6">Login With</h3>
                             <div className="flex justify-center gap-5 mt-3">
-                                <span onClick={()=> otherLogin(googleLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Google</span><FcGoogle className="text-3xl"></FcGoogle></span>
-                                <span onClick={()=> otherLogin(githubLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Github</span><FaGithub className="text-3xl"></FaGithub></span>
+                                <span onClick={() => otherLogin(googleLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Google</span><FcGoogle className="text-3xl"></FcGoogle></span>
+                                <span onClick={() => otherLogin(githubLogin)} className="flex items-center cursor-pointer btn btn-ghost normal-case"><span className="text-xl font-bold">Github</span><FaGithub className="text-3xl"></FaGithub></span>
                             </div>
                         </div>
                     </div>

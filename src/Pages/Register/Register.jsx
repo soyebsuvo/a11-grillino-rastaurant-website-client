@@ -20,6 +20,15 @@ export default function Register() {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
+        if(password.length < 6){
+            toast.error("Password Must be at least 6 characters")
+            return;
+        }
+        // eslint-disable-next-line no-useless-escape
+        if(!/^(?=.*[A-Z]|.*[!@#$%^&*()_+\-=\[\]{};:'",.<>/?])\S+$/.test(password)){
+            toast.error("Password must contain either a capital letter or a special character (or both)");
+            return;
+        }
         createUser(email, password)
             .then((res) => {
                 const newUser = {
@@ -34,9 +43,8 @@ export default function Register() {
                 .then().catch()
                 navigate('/')
             })
-            .catch(error => {
-                console.log(error)
-                toast.error('Something went wrong!');
+            .catch(() => {
+                toast.error('toast.error("Maybe this email is used or enter valid email password")');
             })
         
     }
