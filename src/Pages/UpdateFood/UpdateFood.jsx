@@ -2,10 +2,12 @@ import { useContext } from "react"
 import { AuthContext } from "../../AuthProvider/AuthProvider"
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 export default function UpdateFood() {
+    const navigate = useNavigate();
     const { id } = useParams()
     console.log(id)
     const { data } = useQuery({
@@ -33,6 +35,24 @@ export default function UpdateFood() {
             food_name: name, food_image: photo, count, userName, userEmail, food_category: category, origin, quantity, price, desc
         }
         console.log(updated)
+
+        axios.put(`http://localhost:5000/foods/${id}` , updated)
+        .then(res => {
+            console.log(res.data)
+            if(res.data.acknowledged){
+                Swal.fire(
+                    'Updated!',
+                    'Food Items Updated Successfully!',
+                    'success'
+                  )
+                  e.target.reset()
+                navigate('/myAddedFood')
+            }
+        })
+        .catch(error => {
+            console.log(error)
+        })
+
     }
     return (
         <div className="px-3 md:px-32 py-8">

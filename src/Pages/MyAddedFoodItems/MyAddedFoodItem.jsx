@@ -4,13 +4,22 @@ import DetailsButton from "../../components/FoodMenus/DetailsButton";
 import PropTypes from 'prop-types';
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function MyAddedFoodItem({ food , refetch }) {
     const deleteFoodItem = (id ) => {
         axios.delete(`http://localhost:5000/food/${id}`)
-        .then(result => {
-            console.log(result)
-            refetch()
+        .then(res => {
+            console.log(res.data)
+            if(res.data.acknowledged){
+                Swal.fire(
+                    'Deleted!',
+                    'Food Items Deleted Successfully!',
+                    'success'
+                  )
+                  refetch()
+            }
+            
         })
         .catch(error => {
             console.log(error)

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import axios from "axios";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 
 export default function AddFoodPage() {
@@ -25,6 +26,13 @@ export default function AddFoodPage() {
         axios.post(`http://localhost:5000/foods` , newFood)
         .then(res => {
             console.log(res.data)
+            if(res.data.acknowledged){
+                Swal.fire(
+                    'Succefull!',
+                    'Food Items Added Successfully!',
+                    'success'
+                  )
+            }
         })
         .catch(error => {
             console.log(error)
