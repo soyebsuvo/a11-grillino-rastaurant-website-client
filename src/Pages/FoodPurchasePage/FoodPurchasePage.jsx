@@ -17,7 +17,7 @@ export default function FoodPurchasePage() {
             return await res.data;
         }
     })
-    const { food_name, food_image,  price , desc , count , food_category} = food || {}
+    const { _id , food_name, food_image,  price , desc , count , food_category} = food || {}
     // console.log("from purfkdhfdh" , food)
     const handlePurchase = (e) => {
         e.preventDefault();
@@ -44,11 +44,20 @@ export default function FoodPurchasePage() {
         .catch(error => {
             console.log(error)
         })
+
+        axios.patch(`http://localhost:5000/food/${_id}` , {count : count + 1})
+        .then(res => {
+            console.log(res.data)
+        })
+        .catch(error => {
+            console.log(error)
+        })
     }
     return (
         <div className="px-3 md:px-32 py-8">
             <Helmet>
                 <title>Grillino | Purchase Food</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>

@@ -12,6 +12,7 @@ export default function Blogs() {
         <div>
             <Helmet>
                 <title>Grillino | Blogs</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>

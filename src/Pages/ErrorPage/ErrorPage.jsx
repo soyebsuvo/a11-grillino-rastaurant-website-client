@@ -7,6 +7,7 @@ export default function ErrorPage() {
         <div className='h-[70vh] flex justify-center items-center'>
             <Helmet>
                 <title>Grillino | Error Occuared</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div>
                 <div className='flex justify-center'>

@@ -46,6 +46,7 @@ export default function Register() {
         <div className="py-8">
             <Helmet>
                 <title>Grillino | Register</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="hero min-h-screen px-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">

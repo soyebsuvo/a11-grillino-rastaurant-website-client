@@ -30,6 +30,7 @@ export default function AllFoods() {
         <div className="px-20">
             <Helmet>
                 <title>Grillino | All Foods</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>

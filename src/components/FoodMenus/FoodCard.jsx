@@ -31,7 +31,7 @@ export default function FoodCard({ food }) {
                         Made By - {food?.made_by}
                     </Typography>
                     <Typography variant="subtitle1">
-                        Ordered - {food?.count}
+                        Sold - {food?.count}
                     </Typography>
                 </div>
                 {

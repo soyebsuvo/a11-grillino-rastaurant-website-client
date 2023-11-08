@@ -25,6 +25,7 @@ export default function SingleFood() {
         <div className="py-14">
             <Helmet>
                 <title>Grillino | Food Details</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="flex gap-8 px-16">
                 <div className="flex-1">
@@ -36,7 +37,7 @@ export default function SingleFood() {
                     <p className="font-bold text-gray-500 my-1">Category - {food?.food_category}</p>
                     <p className="font-bold text-gray-500 my-1">Made By - {food?.made_by}</p>
                     <p className="font-bold text-gray-500 my-1">Available Quantity - {food?.quantity}</p>
-                    <p className="font-bold text-gray-500 my-1">Ordered - {food?.count}</p>
+                    <p className="font-bold text-gray-500 my-1">Sold - {food?.count}</p>
                     <div className="flex items-center py-8">
                         <p className="mr-3">Quantity : </p>
                         <button onClick={handleMinus} className="py-2 px-4 bg-orange-100 border border-orange-100 hover:bg-orange-400 duration-300 rounded-sm hover:text-white">-</button>

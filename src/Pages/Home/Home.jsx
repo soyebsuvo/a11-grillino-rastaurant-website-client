@@ -7,6 +7,7 @@ export default function Home() {
     <div>
       <Helmet>
         <title>Grillino | Home</title>
+        <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
       </Helmet>
       <Banner></Banner>
       <FoodCards></FoodCards>

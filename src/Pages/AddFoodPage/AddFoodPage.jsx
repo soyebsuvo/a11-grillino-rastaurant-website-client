@@ -43,6 +43,7 @@ export default function AddFoodPage() {
         <div className="px-3 md:px-32 py-8">
             <Helmet>
                 <title>Grillino | Add A Foods</title>
+                <link rel="icon" type="image/svg+xml" href="../../assets/fav.jpg" />
             </Helmet>
             <div className="text-center py-5">
                 <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
