@@ -1,8 +1,10 @@
-# React + Vite
+# Grillino (Resturant Management Website)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## live Link : [Grillino](https://vacuous-dog.surge.sh)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Project features
+- A customer can easily order food through this website
+- The owner of this website can manage his food very easily.
+- A customer can easily view his orders by going to the order page
+- The website owner can update any feed at any time
+- This website is completely safe. Anyone can sit and order the food they like
