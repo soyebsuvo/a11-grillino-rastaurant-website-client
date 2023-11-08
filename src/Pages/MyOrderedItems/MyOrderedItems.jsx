@@ -10,7 +10,7 @@ export default function MyOrderedItems() {
   const { data: sortedFoods, isLoading, isError, error, refetch } = useQuery({
     queryKey: ['foods'],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/orders?email=${user?.email}`, { withCredentials: true });
+      const res = await axios.get(`https://grillino-assignment-server.vercel.app/orders?email=${user?.email}`, { withCredentials: true });
       return await res.data;
     }
   })

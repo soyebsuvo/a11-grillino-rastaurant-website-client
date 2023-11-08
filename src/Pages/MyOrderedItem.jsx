@@ -5,7 +5,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 export default function MyOrderedItem({food , refetch}) {
     const deleteFoodItem = (id ) => {
-        axios.delete(`http://localhost:5000/orders/${id}`)
+        axios.delete(`https://grillino-assignment-server.vercel.app/orders/${id}`)
         .then(result => {
             console.log(result.data)
             if(result.data.acknowledged){

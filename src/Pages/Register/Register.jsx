@@ -36,7 +36,7 @@ export default function Register() {
                     email : res?.user?.email,
                     photo : res?.user?.photoURL
                 }
-                axios.post(`http://localhost:5000/users` , newUser)
+                axios.post(`https://grillino-assignment-server.vercel.app/users` , newUser)
                 .then().catch(err => console.log(err))
                 toast.success('Successfully Signed In!');
                 update(name , photo)
@@ -57,7 +57,7 @@ export default function Register() {
                     email : res?.user?.email,
                     photo : res?.user?.photoURL
                 }
-                axios.post(`http://localhost:5000/users` , newUser)
+                axios.post(`https://grillino-assignment-server.vercel.app/users` , newUser)
                 .then().catch(err => console.log(err))
                 navigate('/')
             })

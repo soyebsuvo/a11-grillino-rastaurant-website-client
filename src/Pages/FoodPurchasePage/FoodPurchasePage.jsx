@@ -15,7 +15,7 @@ export default function FoodPurchasePage() {
     const { data: food } = useQuery({
         queryKey: ['purchaseFood'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/food/${params.id}`)
+            const res = await axios.get(`https://grillino-assignment-server.vercel.app/food/${params.id}`)
             return await res.data;
         }
     })
@@ -37,7 +37,7 @@ export default function FoodPurchasePage() {
         const purchasedFood = {
             food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : food_category , origin , quantity , price, desc , date
         }
-        axios.post(`http://localhost:5000/orders` , purchasedFood)
+        axios.post(`https://grillino-assignment-server.vercel.app/orders` , purchasedFood)
         .then(res => {
             if(res.data.acknowledged){
                 Swal.fire(
@@ -54,7 +54,7 @@ export default function FoodPurchasePage() {
             console.log(error)
         })
 
-        axios.patch(`http://localhost:5000/food/${_id}` , {count : count + quantityValue , quantity : food?.quantity - quantityValue})
+        axios.patch(`https://grillino-assignment-server.vercel.app/food/${_id}` , {count : count + quantityValue , quantity : food?.quantity - quantityValue})
         .then(res => {
             console.log(res.data)
         })

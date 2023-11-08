@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         {
             path : '/allfooditems',
             element : <AllFoods></AllFoods>,
-            loader : () => fetch(`http://localhost:5000/foodsCount`)
+            loader : () => fetch(`https://grillino-assignment-server.vercel.app/foodsCount`)
         },
         {
             path : '/blogs',
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         {
             path : '/food/:id',
             element : <PrivateRoute><SingleFood></SingleFood></PrivateRoute>,
-            loader : ({params}) => fetch(`http://localhost:5000/food/${params.id}`)
+            loader : ({params}) => fetch(`https://grillino-assignment-server.vercel.app/food/${params.id}`)
         },
         {
             path : '/login',

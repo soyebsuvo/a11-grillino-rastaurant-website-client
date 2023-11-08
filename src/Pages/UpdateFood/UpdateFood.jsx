@@ -13,7 +13,7 @@ export default function UpdateFood() {
     const { data, isLoading, isError, error , refetch} = useQuery({
         queryKey: ['updateFood'],
         queryFn: async () => {
-            const res = await axios.get(`http://localhost:5000/food/${id}`);
+            const res = await axios.get(`https://grillino-assignment-server.vercel.app/food/${id}`);
             return await res.data;
         }
     })
@@ -41,7 +41,7 @@ export default function UpdateFood() {
             food_name: name, food_image: photo, count, userName, userEmail, food_category: category, origin, quantity, price, desc
         }
 
-        axios.put(`http://localhost:5000/foods/${id}`, updated)
+        axios.put(`https://grillino-assignment-server.vercel.app/foods/${id}`, updated)
             .then(res => {
                 if (res.data.acknowledged) {
                     Swal.fire(

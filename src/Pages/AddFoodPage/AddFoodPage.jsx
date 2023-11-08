@@ -25,7 +25,7 @@ export default function AddFoodPage() {
             food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : category , origin , quantity , price, desc
         }
         console.log(newFood)
-        axios.post(`http://localhost:5000/foods` , newFood)
+        axios.post(`https://grillino-assignment-server.vercel.app/foods` , newFood)
         .then(res => {
             console.log(res.data)
             if(res.data.acknowledged){
