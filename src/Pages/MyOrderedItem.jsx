@@ -2,11 +2,19 @@ import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/mate
 import PropTypes from 'prop-types';
 import DetailsButton from "../components/FoodMenus/DetailsButton";
 import axios from "axios";
+import Swal from "sweetalert2";
 export default function MyOrderedItem({food , refetch}) {
     const deleteFoodItem = (id ) => {
         axios.delete(`http://localhost:5000/orders/${id}`)
         .then(result => {
-            console.log(result)
+            console.log(result.data)
+            if(result.data.acknowledged){
+                Swal.fire(
+                    'Deleted!',
+                    'Food Items Deleted Successfully!',
+                    'success'
+                  )
+            }
             refetch()
         })
         .catch(error => {

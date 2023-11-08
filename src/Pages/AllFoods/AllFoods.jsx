@@ -7,7 +7,6 @@ import { Helmet } from "react-helmet-async";
 export default function AllFoods() {
     const [foods , setFoods] = useState([])
     const {count} = useLoaderData()
-    // console.log(count)
     const foodPerPage = 9;
     const [currentPage , setCurrentPage] = useState(0)
     const totalPage = Math.ceil(count / foodPerPage);

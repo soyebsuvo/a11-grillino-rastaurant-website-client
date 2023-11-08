@@ -8,9 +8,10 @@ import MyTextField from "../Login/MyTextField";
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 export default function Register() {
-    const { createUser , googleLogin , githubLogin} = useContext(AuthContext);
+    const { createUser, googleLogin, githubLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const handleRegister = e => {
         e.preventDefault();
@@ -21,23 +22,25 @@ export default function Register() {
         const user = { name, photo, email, password };
         console.log(user)
         createUser(email, password)
-            .then(result => {
-                console.log(result.user)
+            .then(() => {
+                toast.success('Successfully Signed In!');
                 navigate('/')
             })
             .catch(error => {
                 console.log(error)
+                toast.error('Something went wrong!');
             })
     }
     const otherLogin = (media) => {
         media()
-        .then(result => {
-            console.log(result.user)
-            navigate('/')
-        })
-        .catch(error => {
-            console.log(error)
-        })
+            .then(() => {
+                toast.success('Successfully Signed In!');
+                navigate('/')
+            })
+            .catch(error => {
+                console.log(error)
+                toast.error('Something went wrong!');
+            })
     }
     return (
         <div className="py-8">

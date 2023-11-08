@@ -8,7 +8,6 @@ export default function SingleFood() {
     const {setQuantityValue} = useContext(AuthContext)
     const [quantity, setQuantity ] = useState(1)
     const food = useLoaderData();
-    console.log(food)
     const handleMinus = () => {
         if (quantity > 1) {
             setQuantity(quantity - 1)

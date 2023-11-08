@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import Swal from "sweetalert2";
 
 export default function FoodPurchasePage() {
     const { quantityValue } = useContext(AuthContext);
@@ -30,10 +31,15 @@ export default function FoodPurchasePage() {
         const purchasedFood = {
             food_name : name, food_image : photo, count , made_by : userName, userEmail, food_category : food_category , origin , quantity , price, desc , date
         }
-        console.log(purchasedFood);
         axios.post(`http://localhost:5000/orders` , purchasedFood)
         .then(res => {
-            console.log(res.data)
+            if(res.data.acknowledged){
+                Swal.fire(
+                    'Succefull!',
+                    'Food Purchased Successfully!',
+                    'success'
+                  )
+            }
         })
         .catch(error => {
             console.log(error)

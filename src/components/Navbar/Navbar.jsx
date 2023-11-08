@@ -5,6 +5,7 @@ import { BiTime } from 'react-icons/bi';
 import LoginButton from "./LoginButton"
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 export default function Navbar() {
     const { user, logOut } = useContext(AuthContext);
     const links = <>
@@ -17,8 +18,8 @@ export default function Navbar() {
     </>
     const handleLogOut = () => {
         logOut()
-            .then(res => {
-                console.log(res)
+            .then(() => {
+                toast.success('Successfully Logged Out!');
             })
             .catch(err => {
                 console.log(err)

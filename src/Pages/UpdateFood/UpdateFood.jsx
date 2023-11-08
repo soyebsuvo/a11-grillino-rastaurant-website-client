@@ -7,18 +7,24 @@ import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 
 export default function UpdateFood() {
+    const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const { id } = useParams()
-    console.log(id)
-    const { data } = useQuery({
+    const { data, isLoading, isError, error , refetch} = useQuery({
         queryKey: ['updateFood'],
         queryFn: async () => {
             const res = await axios.get(`http://localhost:5000/food/${id}`);
             return await res.data;
         }
     })
+    if (isLoading) {
+        return <div className="flex justify-center items-center h-[50vh]"><span className="loading loading-ring loading-lg"></span></div>
+    }
+    if (isError) {
+        console.log(error.message);
+        return;
+    }
     const { food_name, food_image, price, food_category, origin, quantity, desc } = data || {};
-    const { user } = useContext(AuthContext);
     const handleUpdateFood = (e) => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -34,24 +40,23 @@ export default function UpdateFood() {
         const updated = {
             food_name: name, food_image: photo, count, userName, userEmail, food_category: category, origin, quantity, price, desc
         }
-        console.log(updated)
 
-        axios.put(`http://localhost:5000/foods/${id}` , updated)
-        .then(res => {
-            console.log(res.data)
-            if(res.data.acknowledged){
-                Swal.fire(
-                    'Updated!',
-                    'Food Items Updated Successfully!',
-                    'success'
-                  )
-                  e.target.reset()
-                navigate('/myAddedFood')
-            }
-        })
-        .catch(error => {
-            console.log(error)
-        })
+        axios.put(`http://localhost:5000/foods/${id}`, updated)
+            .then(res => {
+                if (res.data.acknowledged) {
+                    Swal.fire(
+                        'Updated!',
+                        'Food Items Updated Successfully!',
+                        'success'
+                    )
+                    refetch()
+                    navigate('/myAddedFood')
+                }
+                e.target.reset()
+            })
+            .catch(error => {
+                console.log(error)
+            })
 
     }
     return (

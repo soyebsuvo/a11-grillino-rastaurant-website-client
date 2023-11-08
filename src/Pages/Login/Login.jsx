@@ -8,6 +8,7 @@ import { FaGithub } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import toast from "react-hot-toast";
 
 export default function Login() {
     const location = useLocation();
@@ -18,8 +19,8 @@ export default function Login() {
         const email = e.target.email.value;
         const password = e.target.password.value;
         login(email , password)
-        .then(result => {
-            console.log(result.user)
+        .then(() => {
+            toast.success('Successfully Logged In!');
             navigate(location.state ? location.state : '/')
         })
         .catch(error => [
@@ -28,10 +29,9 @@ export default function Login() {
     }
     const otherLogin = (media) => {
         media()
-        .then(result => {
-            console.log(result.user)
+        .then(() => {
+            toast.success('Successfully Logged In!');
             navigate(location.state ? location.state : '/')
-
         })
         .catch(error => {
             console.log(error)
