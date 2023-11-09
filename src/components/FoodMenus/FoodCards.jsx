@@ -26,7 +26,7 @@ export default function FoodCards() {
     <div className="px-20">
       <div className="text-center py-5">
         <h3 className="font-edu-beginner text-orange-400 font-bold mb-2">Corporate Applications</h3>
-        <h2 className="font-open-sans text-4xl font-bold">Our Food Menu</h2>
+        <h2 className="font-open-sans text-4xl font-bold">Top Food Menu</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 py-6">
         {
