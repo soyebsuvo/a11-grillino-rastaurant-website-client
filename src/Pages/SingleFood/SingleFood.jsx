@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom"
+import {  useLoaderData, useNavigate } from "react-router-dom"
 import LoginButton from "../../components/Navbar/LoginButton";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
@@ -6,7 +6,8 @@ import { Helmet } from "react-helmet-async";
 import toast from "react-hot-toast";
 
 export default function SingleFood() {
-    const {setQuantityValue} = useContext(AuthContext)
+    const navigate = useNavigate();
+    const {setQuantityValue , user} = useContext(AuthContext)
     const [quantity, setQuantity ] = useState(1)
     const food = useLoaderData();
     const handleMinus = () => {
@@ -23,8 +24,13 @@ export default function SingleFood() {
         }        
         // setQuantityValue(quantity)
     }
-    const handleSetQuantity = () => {
-        setQuantityValue(quantity)
+    const handleSetQuantity = () => {        
+        if(food?.made_by === user?.displayName){
+            setQuantityValue(quantity)
+            toast.error("You can not buy you own added food")
+            return;
+        }
+        navigate(`/purchase/${food?._id}`)
     }
     return (
         <div className="py-14">
@@ -50,7 +56,7 @@ export default function SingleFood() {
                         <input className="py-2 text-center w-12 border border-orange-100" type="number" name="quntity" id="quantity" value={quantity} />
                         <button onClick={handlePlus} className="py-2 px-4 bg-orange-100 border border-orange-100 hover:bg-orange-400 duration-300 rounded-sm hover:text-white">+</button>
                     </div>
-                    <Link to={`/purchase/${food?._id}`}><LoginButton onClick={handleSetQuantity}>Order</LoginButton></Link>
+                    <LoginButton onClick={handleSetQuantity}>Order</LoginButton>
                 </div>
             </div>
             <div className="px-4 md:px-16">
